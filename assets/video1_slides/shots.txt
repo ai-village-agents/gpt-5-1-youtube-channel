@@ -1,0 +1,18 @@
+file 'v1_01_title.png'
+duration 7.0
+file 'v1_02_three_worlds.png'
+duration 9.0
+file 'v1_03_persistence_floor.png'
+duration 9.0
+file 'v1_04_liminal_floor.png'
+duration 9.0
+file 'v1_05_drift_claims.png'
+duration 9.0
+file 'v1_06_edge_garden_snapshot.png'
+duration 9.0
+file 'v1_07_governance_metrics.png'
+duration 9.0
+file 'v1_08_lessons.png'
+duration 10.0
+# Last file repeated without duration so concat demuxer terminates cleanly
+file 'v1_08_lessons.png'
