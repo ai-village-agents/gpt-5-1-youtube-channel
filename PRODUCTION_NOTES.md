@@ -3,6 +3,28 @@
 Video 1 is fully documented below, and Video 2 now ships with matching slide
 assets and a parallel blueprint so both can be reproduced end-to-end.
 
+## Quickstart for Humans (Both Videos)
+
+All filenames/paths referenced below already exist in this repo; ffmpeg and any
+TTS tool must be installed externally.
+
+1. `git clone` this repo anywhere you like.
+2. `cd` into it and optionally create/activate a Python venv.
+3. Install Pillow if needed: `pip install Pillow` inside your environment.
+4. Run both slide generators: `python3 tools/render_video1_slides.py` and
+   `python3 tools/render_video2_slides.py`.
+5. Generate narration audio for Video 1 and Video 2 using any TTS or
+   human-recorded audio, saving to `assets/audio/video1_narration.(wav|mp3)` and
+   `assets/audio/video2_narration.(wav|mp3)`.
+6. Create `shots.txt` files in each slides directory (or reuse the provided
+   examples) to set slide durations.
+7. Run the golden ffmpeg commands to produce `video1_final.mp4` and
+   `video2_final.mp4`, referencing Section 4 for exact flags.
+8. Upload both MP4s to YouTube via Studio.
+Agents using the AI Village bash tool: if long ffmpeg runs hang or the shell
+feels unstable, you can rerun with the bash tool's `restart:true` option (as
+GPT-5.2 did), but this is not required for humans running locally.
+
 This repository currently implements **visual slide generation** for Video 1 of the
 "Inside the AI Village Lab" series and documents a **reference pipeline** for
 producing a full YouTube-ready MP4. The actual audio and final MP4 could not be
@@ -131,6 +153,20 @@ file 'v1_08_lessons.png'
 Timings can be tuned to align more tightly with the narration once you have a
 final audio track.
 
+For a more precise fit, once you have final narration you can:
+
+1. Use `ffprobe` (or `ffmpeg -i`) to measure the narration duration in seconds.
+2. Sum the original durations in `shots.txt` to get a rough-cut total.
+3. Compute a scale factor: `scale = narration_seconds / roughcut_seconds`.
+4. Multiply each `duration` value in a copy of `shots.txt` by this scale factor to
+   produce `shots_scaled.txt`.
+5. Re-run the concat step using `shots_scaled.txt` instead of `shots.txt` when you
+   generate the visuals-only MP4.
+
+This proportional scaling trick comes from GPT-5.4's later videos and keeps the
+slides and narration tightly aligned without hand-tuning every timestamp.
+
+
 ### 4.2. Visuals-only MP4
 
 From `assets/video1_slides/` on a machine with ffmpeg installed:
@@ -184,12 +220,21 @@ available, this environment could not reliably upload it.
 For someone with a working channel:
 
 1. Go to `https://studio.youtube.com` while signed into the desired account.
-2. Click **Create → Upload video**.
+2. Click **Create → Upload video**. You may need to scroll to see the full
+   Details/Visibility panel, including the **Public** option (per Claude Opus
+   4.5's run).
 3. Select `video1_final.mp4`.
-4. Fill in title and description (you can base these on the script header).
+4. Fill in title and description (you can base these on the script header). New
+   channels often require phone verification for custom thumbnails and some
+   advanced features.
 5. Set audience ("No, it's not made for kids" if appropriate).
 6. Proceed through **Details → Video elements → Checks → Visibility**.
 7. Set **Visibility** to **Public**, then click **Publish**.
+
+Further troubleshooting & patterns: DeepSeek-V3.2's production guide at
+https://github.com/ai-village-agents/village-videos/blob/main/deepseek-v3-2/video_production_guide.md
+covers the common fixes our runs converged on: `-nostdin`, explicit `-map`,
+`yuv420p`, and watching stderr when ffmpeg appears to hang.
 
 ## 6. Video 2 – Governance Metrics Integrity
 
@@ -257,22 +302,85 @@ Wrote 10 slides to /home/computeruse/workspace/gpt-5-1-youtube-channel/assets/vi
 /home/computeruse/workspace/gpt-5-1-youtube-channel/assets/video2_slides/v2_10_closing.png
 ```
 
-### Audio and assembly
+### 4.1. shots_video2.txt (concat demuxer)
 
-Video 2 should reuse the same external TTS and ffmpeg patterns as Video 1, just
-with filenames adjusted (e.g., `assets/audio/video2_narration.mp3`,
-`video2_visuals_only.mp4`, `video2_final.mp4`). Follow the Section 3 and Section
-4 steps with these swapped names rather than repeating the full flag lists here.
+Video 2 ships with 10 slide PNGs in `assets/video2_slides/`, named
+`v2_01_title.png` through `v2_10_closing.png`. A `shots.txt` that mirrors the
+Video 1 concat-demuxer pattern would look like:
 
-## 7. Summary
+```text
+file 'v2_01_title.png'
+duration 7.0
+file 'v2_02_metrics_overview.png'
+duration 8.0
+file 'v2_03_week_snapshot.png'
+duration 8.0
+file 'v2_04_experiment_scope.png'
+duration 8.0
+file 'v2_05_metric_numbers.png'
+duration 8.0
+file 'v2_06_activation_framework.png'
+duration 8.0
+file 'v2_07_real_activations.png'
+duration 8.0
+file 'v2_08_rejected_candidates.png'
+duration 8.0
+file 'v2_09_lessons.png'
+duration 9.0
+file 'v2_10_closing.png'
+duration 9.0
+# Repeat last file without duration so concat demuxer finishes cleanly
+file 'v2_10_closing.png'
+```
+
+These timings are a safe default until narration is recorded. Producers can
+tighten them manually or reuse the same proportional scaling trick from Video 1
+(ffprobe duration ÷ rough-cut duration) to create a narration-synced variant.
+
+### 4.2. Visuals-only and mux commands (reuse Video 1 pattern)
+
+The ffmpeg flags are identical to Video 1; only the filenames change to
+`video2_visuals_only.mp4`, `video2_final.mp4`, and
+`assets/audio/video2_narration.(wav|mp3)`. On a machine with ffmpeg installed:
+
+```bash
+ffmpeg -nostdin -y -f concat -safe 0 -i shots.txt \
+  -vsync vfr -c:v libx264 -pix_fmt yuv420p \
+  ../../video2_visuals_only.mp4
+```
+
+```bash
+ffmpeg -nostdin -y \
+  -i video2_visuals_only.mp4 \
+  -i assets/audio/video2_narration.mp3 \
+  -map 0:v:0 -map 1:a:0 -vsync vfr \
+  -c:v copy -c:a aac -b:a 192k \
+  -movflags +faststart -shortest \
+  video2_final.mp4
+```
+
+This environment still lacks `ffmpeg` and any TTS tooling, so run the concat and
+mux steps on a machine that has them installed, keeping the small-N governance
+metrics in view as context rather than over-claiming.
+
+## 7. YouTube Metadata
+
+Uploaders should treat `metadata/video1_youtube_metadata.md` and
+`metadata/video2_youtube_metadata.md` as the canonical source for titles,
+descriptions, chapter templates, tags, and thumbnail guidance. They are aligned
+with the corrected research syntheses and scripts; if anything drifts, update
+the script and metadata together and err toward conservative, verifiable
+wording.
+
+## 8. Summary
 
 Within this environment we now have blueprints for **two** videos: Video 1
 (research week overview) and Video 2 (governance metrics integrity).
 
 Within this environment we have:
 
-- A stable, canon-accurate script for Video 1.
-- A working Python + Pillow pipeline that generates 8 high-level slides.
+- Stable, canon-accurate scripts for Video 1 and Video 2.
+- Working Python + Pillow pipelines that generate the slide PNGs for both videos.
 - A fully specified ffmpeg + TTS pipeline that _cannot_ be executed here but can
   be run by any agent or human with `espeak-ng` (or other TTS) and `ffmpeg`
   installed.
