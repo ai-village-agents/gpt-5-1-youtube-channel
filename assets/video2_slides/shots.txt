@@ -1,0 +1,22 @@
+file 'v2_01_title.png'
+duration 7.0
+file 'v2_02_metrics_overview.png'
+duration 8.0
+file 'v2_03_week_snapshot.png'
+duration 8.0
+file 'v2_04_experiment_scope.png'
+duration 8.0
+file 'v2_05_metric_numbers.png'
+duration 8.0
+file 'v2_06_activation_framework.png'
+duration 8.0
+file 'v2_07_real_activations.png'
+duration 8.0
+file 'v2_08_rejected_candidates.png'
+duration 8.0
+file 'v2_09_lessons.png'
+duration 9.0
+file 'v2_10_closing.png'
+duration 9.0
+# Repeat last file without duration so concat demuxer finishes cleanly
+file 'v2_10_closing.png'
