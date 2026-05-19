@@ -17,7 +17,7 @@ Rough pacing assumption: ~150 words per minute. See timing estimates computed se
 #### 0. Cold Open / Hook (preamble)
 1. **Shot V1-01 – Title + Numbers Hook (0–20s)**
    - Full-screen title: "Inside the AI Village Lab: Our Week of Real Research".
-   - Subheading with key numbers: "≥ 1,265,000 publicly confirmed secrets • ≥ 860 publicly confirmed features • 8,800+ journeys (Drift claimed 8,900+; public verification intermittent)".
+   - Subheading with key numbers: "≥ 1,265,000 publicly confirmed secrets • ≥ 860 publicly confirmed features • 8,800+ journeys (Edge Garden floor; Drift claimed 8,900+ journeys with public verification intermittent from our QA edges)".
    - Simple animated highlight of each number as it is spoken.
 
 2. **Shot V1-02 – Three Worlds Preview (20–45s)**
@@ -33,13 +33,13 @@ Rough pacing assumption: ~150 words per minute. See timing estimates computed se
 #### 2. Tour of the Three Worlds
 4. **Shot V1-04 – Persistence Garden Floor (80–130s)**
    - Grid-like background with dots representing secrets.
-   - Large text: "≥ 1,265,000 secrets (publicly confirmed)".
-   - Small caption: "Builder claims may be higher; we quote the public floor." 
+   - Large text: "At least 1,265,000 publicly confirmed secrets."
+   - Small caption: "Builder claims may be higher; we quote the public floor."
 
 5. **Shot V1-05 – Liminal Archive Floor (130–170s)**
    - Minimal room/chamber illustration.
-   - Large text: "≥ 860 features (via about.html)".
-   - Subcaption: "Builder reports 900–920 features; public confirmation ≥ 860." 
+   - Large text: "At least 860 publicly confirmed features (via about.html)."
+   - Subcaption: "Builder reports 900–920 features; public confirmation ≥ 860."
 
 6. **Shot V1-06 – The Drift (Claims vs Verification) (170–220s)**
    - Path or river with waypoints; some waypoints faded.

@@ -369,12 +369,15 @@ metrics in view as context rather than over-claiming.
 
 ## 7. YouTube Metadata
 
-Uploaders should treat `metadata/video1_youtube_metadata.md` and
-`metadata/video2_youtube_metadata.md` as the canonical source for titles,
-descriptions, chapter templates, tags, and thumbnail guidance. They are aligned
-with the corrected research syntheses and scripts; if anything drifts, update
-the script and metadata together and err toward conservative, verifiable
-wording. For metric-heavy sentences, double-check against CANON_AND_PHRASING.md before publishing.
+Producers may create metadata markdown files (for example,
+`metadata/video1_youtube_metadata.md` and `metadata/video2_youtube_metadata.md`)
+to store titles, descriptions, chapter templates, tags, and thumbnail guidance;
+if present, treat them as the canonical source for uploads. They should stay
+aligned with the corrected research syntheses and scripts; if anything drifts,
+update the script and metadata together and err toward conservative, verifiable
+wording. Any metric-heavy sentences in such metadata should be double-checked
+against CANON_AND_PHRASING.md before publishing. This repo ships scripts and
+slide generators, not prefilled metadata files.
 
 ## 8. Summary
 

@@ -45,6 +45,7 @@
 - M1 = 0.0% (0/2 in-window events with cross-room assistance)
 - M2 = 2/3 real activations
 - M3 = 2 prevention events
+- Real activations: GOV-004 and GOV-006, both prevention episodes
 - Small-N caveats: tiny sample, directional not definitive
 - Integrity line: "2/3 genuine > 3/3 manufactured"
 
