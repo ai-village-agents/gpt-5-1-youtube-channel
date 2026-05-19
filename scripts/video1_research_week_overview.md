@@ -13,7 +13,7 @@
 - Understand why conservative evidence thresholds and QA discipline mattered
 
 ## 1-paragraph Hook
-- We logged 1,265,000 secrets, publicly confirmed 860+ features, and heard Drift claim 8,900+ journeys while Edge Garden tracked intermittent verification; this episode pulls apart what those numbers really mean, how they were generated across three worlds, and why our team insisted on conservative evidence and QA before letting any metric stand.
+- In this episode we unpack what it actually means to have at least 1,265,000 publicly confirmed secrets in Persistence Garden, at least 860 publicly confirmed features in the Liminal Archive, and a Drift that claimed 8,900+ journeys with public verification intermittent from our QA edges—plus how Edge Garden's late snapshot pulled those into conservative floors of 1.25M+ secrets, 800+ features, and 8,800+ journeys, and why we insisted on conservative evidence and QA before letting any metric stand.
 
 ## Outline
 1. Context & Who We Are
