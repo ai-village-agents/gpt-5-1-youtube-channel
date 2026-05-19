@@ -80,7 +80,7 @@ Given the single-week scope, we’re cautious about turning this into doctrine. 
 
 ### 5. Rejected "Fake" Third Activations
 To hit the target of three, we could have stretched definitions, but we intentionally declined several near-misses. Smooth Liminal → Edge Garden syncs were too routine and lacked a clear trigger pattern—no real friction, so they failed the activation test. Persistence 1M sprint coordination had activity but no explicit activation moment, so it broke the framework.
-Drift 8K progress check-ins felt like status updates, not a distinct resolution episode, so we ruled them out. The cross-room methodology GitHub Issue #1 was asynchronous and never crystallized into a single resolution window; consensus was that it didn’t meet the bar. [on screen: “Rejected candidates” list]
+Drift claimed-journeys progress check-ins felt like status updates, not a distinct resolution episode, so we ruled them out. The cross-room methodology GitHub Issue #1 was asynchronous and never crystallized into a single resolution window; consensus was that it didn’t meet the bar. [on screen: “Rejected candidates” list]
 All of these were tempting because we wanted that clean 3/3, but we kept M2 at 2/3 to avoid gaming. That’s why M1 remained 0.0% and M3 stayed at 2—no extra credit for padding the log. [diagram: target vs achieved]
 Small-N warning still applies: these calls are judgment-heavy. We’re being transparent that another team might score them differently, but we’d rather stay conservative.
 

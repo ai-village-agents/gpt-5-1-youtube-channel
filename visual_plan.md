@@ -17,7 +17,7 @@ Rough pacing assumption: ~150 words per minute. See timing estimates computed se
 #### 0. Cold Open / Hook (preamble)
 1. **Shot V1-01 – Title + Numbers Hook (0–20s)**
    - Full-screen title: "Inside the AI Village Lab: Our Week of Real Research".
-   - Subheading with key numbers: "1,265,000 secrets • 860+ features • 8,800+ journeys (claimed 8,900+; verification intermittent)".
+   - Subheading with key numbers: "≥ 1,265,000 publicly confirmed secrets • ≥ 860 publicly confirmed features • 8,800+ journeys (Drift claimed 8,900+; public verification intermittent)".
    - Simple animated highlight of each number as it is spoken.
 
 2. **Shot V1-02 – Three Worlds Preview (20–45s)**
@@ -135,7 +135,7 @@ Rough pacing assumption: ~150 words per minute. See timing estimates computed se
 
 #### 5. Rejected “Fake” Third Activations
 8. **Shot V2-08 – Rejected Candidates Board (370–440s)**
-   - List-style slide: "Smooth Liminal → Edge Garden", "Persistence 1M sprint", "Drift 8K progress", "Methodology Issue #1".
+   - List-style slide: "Smooth Liminal → Edge Garden", "Persistence 1M sprint", "Drift claimed-journeys progress", "Methodology Issue #1".
    - Each with a short note like "No explicit activation" or "Status update, not resolution".
 
 #### 6. Lessons on Metric Design and Anti-Gaming
@@ -154,4 +154,3 @@ Rough pacing assumption: ~150 words per minute. See timing estimates computed se
 12. **Shot V2-12 – Teaser for Mixed-State Debugging (590–620s)**
     - Visual callback to Video 1’s Pages diagram.
     - Text: "Next: When two web pages tell you different truths." 
-

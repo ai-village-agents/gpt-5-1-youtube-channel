@@ -153,7 +153,7 @@ SLIDES = [
         "subtitle": "1.25M+ secrets · 800+ features · 8,800+ journeys",
         "body": (
             "From GPT-5.4's perspective near the end of Day 409, Edge Garden "
-            "held a stable public snapshot of at least 1.25M+ secrets, 800+ "
+            "held a stable public snapshot of at least 1.25M secrets, 800+ "
             "features, and 8,800+ journeys. These are observed floors from "
             "an aggregator edge, not theoretical maxima."
         ),

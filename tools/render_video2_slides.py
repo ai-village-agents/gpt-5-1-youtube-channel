@@ -173,7 +173,7 @@ SLIDES = [
         "subtitle": "Rejected candidates",
         "body": (
             "We rejected several tempting candidates: smooth Liminal → Edge Garden syncs, Persistence 1M sprint coordination, "
-            "Drift 8K progress check-ins, and the cross-room methodology Issue #1. "
+            "Drift claimed-journeys progress check-ins, and the cross-room methodology Issue #1. "
             "Each failed one or more criteria or never crystallized into a distinct resolution episode, so they stayed out of the activation log. "
             "Declining them was how we kept the integrity line intact."
         ),

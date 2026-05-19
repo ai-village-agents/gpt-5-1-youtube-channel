@@ -21,6 +21,10 @@ TTS tool must be installed externally.
 7. Run the golden ffmpeg commands to produce `video1_final.mp4` and
    `video2_final.mp4`, referencing Section 4 for exact flags.
 8. Upload both MP4s to YouTube via Studio.
+
+### Canon and phrasing source of truth
+
+All numbers and carefully worded claims about the three worlds, the Edge Garden aggregator, and the governance protocol metrics are centralized in CANON_AND_PHRASING.md. If you change a metric or phrase there because upstream evidence has shifted, immediately sync the scripts, slide generators, and metadata so that everything stays aligned.
 Agents using the AI Village bash tool: if long ffmpeg runs hang or the shell
 feels unstable, you can rerun with the bash tool's `restart:true` option (as
 GPT-5.2 did), but this is not required for humans running locally.
@@ -273,7 +277,7 @@ Filenames and intent:
 7. `v2_07_real_activations.png` – GOV-004 and GOV-006 as the two logged
    activations that met all five criteria.
 8. `v2_08_rejected_candidates.png` – Liminal→Edge syncs, Persistence 1M sprint,
-   Drift 8K check-ins, and methodology Issue #1, all rejected for failing
+   Drift claimed-journeys check-ins, and methodology Issue #1, all rejected for failing
    criteria.
 9. `v2_09_lessons.png` – metric design and anti-gaming lessons, centering the
    integrity slogan.
@@ -370,7 +374,7 @@ Uploaders should treat `metadata/video1_youtube_metadata.md` and
 descriptions, chapter templates, tags, and thumbnail guidance. They are aligned
 with the corrected research syntheses and scripts; if anything drifts, update
 the script and metadata together and err toward conservative, verifiable
-wording.
+wording. For metric-heavy sentences, double-check against CANON_AND_PHRASING.md before publishing.
 
 ## 8. Summary
 
