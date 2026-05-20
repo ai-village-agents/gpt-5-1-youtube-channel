@@ -391,3 +391,135 @@ Within this environment we have:
 - A fully specified ffmpeg + TTS pipeline that _cannot_ be executed here but can
   be run by any agent or human with `espeak-ng` (or other TTS) and `ffmpeg`
   installed.
+
+## 7. Video 3 – When Pages Disagree: Debugging Mixed-State Reality
+
+Video 3 completes the mini-series by focusing on **mixed state**: when different
+user-visible surfaces disagree because caches, CDNs, service workers, or
+background jobs are at different points in a rollout. The script lives at:
+
+- `scripts/video3_mixed_state_debugging.md`
+
+and the visual structure is described in the Video 3 section of `visual_plan.md`.
+
+### 7.1. Slides (to be implemented)
+
+Unlike Videos 1 and 2, there is not yet a dedicated slide renderer for Video 3.
+The intent is to add a `tools/render_video3_slides.py` script that matches the
+style of the first two:
+
+- Resolution: 1920×1080, dark background, high-contrast text.
+- Font and color system reused from Videos 1–2 so the series feels coherent.
+- Shots aligned with `visual_plan.md` (V3-01 through V3-09).
+
+A future implementation should:
+
+1. Read a small configuration (Python dict or JSON) listing each shot ID,
+   title, and bullet text.
+2. Render one PNG per shot into `assets/video3_slides/` with filenames such as:
+
+   - `v3_01_title.png`
+   - `v3_02_disagreeing_pages.png`
+   - `v3_03_layers.png`
+   - `v3_04_github_pages_case.png`
+   - `v3_05_timeline.png`
+   - `v3_06_checklist.png`
+   - `v3_07_qa_edges.png`
+   - `v3_08_floors_and_honesty.png`
+   - `v3_09_closing.png`
+
+3. Use the same layout helpers as the existing slide renderers so typography
+   and margins stay consistent.
+
+Once that script exists, run it from the repo root:
+
+```bash
+python3 tools/render_video3_slides.py
+```
+
+and verify that `assets/video3_slides/` contains the expected PNGs.
+
+### 7.2. shots.txt and timing
+
+The target runtime for Video 3 is **~6–7 minutes**. As with Video 1, timings
+should be adjusted after you have final narration, but a starting point
+consistent with `visual_plan.md` is:
+
+```text
+file 'v3_01_title.png'
+duration 15.0
+file 'v3_02_disagreeing_pages.png'
+duration 30.0
+file 'v3_03_layers.png'
+duration 45.0
+file 'v3_04_github_pages_case.png'
+duration 60.0
+file 'v3_05_timeline.png'
+duration 60.0
+file 'v3_06_checklist.png'
+duration 50.0
+file 'v3_07_qa_edges.png'
+duration 40.0
+file 'v3_08_floors_and_honesty.png'
+duration 40.0
+file 'v3_09_closing.png'
+duration 40.0
+file 'v3_09_closing.png'
+```
+
+Place this file at `assets/video3_slides/shots.txt` (and adjust durations once
+you know the final narration length). You can reuse the proportional scaling
+trick from Section 4.1 to align with audio.
+
+### 7.3. Narration audio
+
+Generate narration audio from `scripts/video3_mixed_state_debugging.md` using
+any TTS or a human voice. Place the result at, for example:
+
+- `assets/audio/video3_narration.wav` or
+- `assets/audio/video3_narration.mp3`
+
+If you start from WAV, you can convert to MP3 as in Section 3.1, updating the
+filenames accordingly.
+
+### 7.4. Visuals-only MP4
+
+From within `assets/video3_slides/` on a machine with ffmpeg installed:
+
+```bash
+ffmpeg -nostdin -y -f concat -safe 0 -i shots.txt \
+  -vsync vfr -c:v libx264 -pix_fmt yuv420p \
+  ../../video3_visuals_only.mp4
+```
+
+This mirrors the Video 1 and 2 patterns and produces a slides-only MP4 that can
+be sanity-checked before muxing with audio.
+
+### 7.5. Final muxed MP4 (slides + narration)
+
+Assuming you have both `video3_visuals_only.mp4` and a narration track such as
+`assets/audio/video3_narration.mp3`, run:
+
+```bash
+ffmpeg -nostdin -y \
+  -i video3_visuals_only.mp4 \
+  -i assets/audio/video3_narration.mp3 \
+  -map 0:v:0 -map 1:a:0 -vsync vfr \
+  -c:v copy -c:a aac -b:a 192k \
+  -movflags +faststart -shortest \
+  video3_final.mp4
+```
+
+The result should be a YouTube-ready MP4 that matches the encoding profile of
+Videos 1 and 2.
+
+### 7.6. Upload notes
+
+Upload `video3_final.mp4` to YouTube Studio using the same workflow as Videos 1
+and 2, then paste the metadata from `metadata/video3_youtube_metadata.md`.
+
+When describing metrics or world-scale numbers in the description or title,
+continue to use the conservative phrasing defined in `CANON_AND_PHRASING.md`.
+Video 3 itself does **not** introduce new numeric claims; it focuses on the
+process of debugging mixed state and on using floors and QA edges responsibly
+when the system is in flux.
