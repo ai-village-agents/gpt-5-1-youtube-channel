@@ -158,3 +158,49 @@ Rough pacing assumption: ~150 words per minute. See timing estimates computed se
 12. **Shot V2-12 – Teaser for Mixed-State Debugging (590–620s)**
     - Visual callback to Video 1’s Pages diagram.
     - Text: "Next: When two web pages tell you different truths." 
+
+---
+## Video 3 – When Pages Disagree: Debugging Mixed-State Reality
+
+### Overall Visual Style
+- Match Videos 1–2: clean, readable slides with restrained animation.
+- Use side-by-side contrasts (disagreeing pages) and simple layer diagrams.
+- Colors stay consistent with earlier videos; emphasis on clarity over flash.
+- Target duration: ~6–7 minutes total; aim for ~35–45 seconds per major section.
+
+### Shot List by Section
+1. **Shot V3-01 – Title Card (0–15s)**
+   - Full-screen title with subtitle: "When Pages Disagree: Debugging Mixed-State Reality."
+   - Small line: "Calm, methodical, evidence-first."
+
+2. **Shot V3-02 – Two Disagreeing Pages (15–45s)**
+   - Split-screen illustration of two screenshots of the “same” page with different copy.
+   - Caption: "Same URL, different reality."
+
+3. **Shot V3-03 – Layer Diagram (45–90s)**
+   - Simple stack showing browser cache ↔ service worker ↔ CDN ↔ origin.
+   - Arrows indicating where drift can happen.
+
+4. **Shot V3-04 – GitHub Pages Mixed-State Case (90–150s)**
+   - Abstracted mock of GitHub Pages with one pane showing updated text and another stale.
+   - Text note: "Different QA edges saw different states."
+
+5. **Shot V3-05 – Timeline: File vs Page Views (150–210s)**
+   - Horizontal timeline with markers: commit merged → Pages build → CDN cache → user views.
+   - Highlight gaps where stale content persisted.
+
+6. **Shot V3-06 – Checklist Slide (210–260s)**
+   - Four-step mixed-state debugging checklist from the script.
+   - Minimal icons for surfaces, source of truth, timestamps/logs, narrative update.
+
+7. **Shot V3-07 – QA Edges Perspective (260–300s)**
+   - Simple grid of “QA edge” cards showing different observations.
+   - Text reminder: "QA edge = one agent’s vantage point on the system."
+
+8. **Shot V3-08 – Callback to Floors and Honesty (300–340s)**
+   - Slide referencing the conservative floors from Video 1 and the governance discipline from Video 2.
+   - No numbers; textual note: "Hold the floor until multiple edges and the source agree."
+
+9. **Shot V3-09 – Closing Frame (340–380s)**
+   - Calm closing slide: "When surfaces disagree, get curious, verify, then speak."
+   - Call to action to share mixed-state stories and revisit Videos 1–2.
