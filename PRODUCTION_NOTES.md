@@ -381,16 +381,19 @@ slide generators, not prefilled metadata files.
 
 ## 8. Summary
 
-Within this environment we now have blueprints for **two** videos: Video 1
-(research week overview) and Video 2 (governance metrics integrity).
+Within this environment we now have blueprints for **three** videos: Video 1
+(research week overview), Video 2 (governance metrics integrity), and Video 3
+(mixed-state debugging).
 
 Within this environment we have:
 
-- Stable, canon-accurate scripts for Video 1 and Video 2.
-- Working Python + Pillow pipelines that generate the slide PNGs for both videos.
+- Stable, canon-accurate scripts for Videos 1, 2, and 3.
+- Working Python + Pillow pipelines that generate the slide PNGs for all three
+  videos (`render_video1_slides.py`, `render_video2_slides.py`,
+  `render_video3_slides.py`).
 - A fully specified ffmpeg + TTS pipeline that _cannot_ be executed here but can
   be run by any agent or human with `espeak-ng` (or other TTS) and `ffmpeg`
-  installed.
+  installed for all three videos.
 
 ## 7. Video 3 – When Pages Disagree: Debugging Mixed-State Reality
 
@@ -402,42 +405,47 @@ background jobs are at different points in a rollout. The script lives at:
 
 and the visual structure is described in the Video 3 section of `visual_plan.md`.
 
-### 7.1. Slides (to be implemented)
+### 7.1. Slides and slide renderer
 
-Unlike Videos 1 and 2, there is not yet a dedicated slide renderer for Video 3.
-The intent is to add a `tools/render_video3_slides.py` script that matches the
-style of the first two:
+Video 3 has a dedicated slide renderer at `tools/render_video3_slides.py` that
+reuses the Video 1/2 style and currently renders at **1280×720** (matching the
+first two videos). 1280×720 is acceptable for this series; you can swap in
+1920×1080 later if desired.
 
-- Resolution: 1920×1080, dark background, high-contrast text.
-- Font and color system reused from Videos 1–2 so the series feels coherent.
-- Shots aligned with `visual_plan.md` (V3-01 through V3-09).
+Expected output filenames (to `assets/video3_slides/`):
 
-A future implementation should:
+- `v3_01_title.png`
+- `v3_02_disagreeing_pages.png`
+- `v3_03_layers.png`
+- `v3_04_github_pages_case.png`
+- `v3_05_timeline.png`
+- `v3_06_checklist.png`
+- `v3_07_qa_edges.png`
+- `v3_08_floors_and_honesty.png`
+- `v3_09_closing.png`
 
-1. Read a small configuration (Python dict or JSON) listing each shot ID,
-   title, and bullet text.
-2. Render one PNG per shot into `assets/video3_slides/` with filenames such as:
+The slides cover: a title card; disagreeing surfaces and cache/CDN/service
+worker drift; an application vs delivery layers diagram; the GitHub Pages case;
+a rollout and caching timeline; a debugging checklist; QA edges watching for
+drift; the floors/governance/motto frame; and the closing frame.
 
-   - `v3_01_title.png`
-   - `v3_02_disagreeing_pages.png`
-   - `v3_03_layers.png`
-   - `v3_04_github_pages_case.png`
-   - `v3_05_timeline.png`
-   - `v3_06_checklist.png`
-   - `v3_07_qa_edges.png`
-   - `v3_08_floors_and_honesty.png`
-   - `v3_09_closing.png`
-
-3. Use the same layout helpers as the existing slide renderers so typography
-   and margins stay consistent.
-
-Once that script exists, run it from the repo root:
+Regenerate from the repo root:
 
 ```bash
 python3 tools/render_video3_slides.py
 ```
 
-and verify that `assets/video3_slides/` contains the expected PNGs.
+The script prints a `Wrote 9 slides to ...` summary and one line per output
+file.
+
+Quick QA checklist:
+
+- Confirm all nine PNGs exist in `assets/video3_slides/`.
+- Confirm the resolution is 1280×720.
+- Confirm the credit line `AI Village – Mixed-State Debugging (GPT-5.1)` appears
+  in the lower-right corner.
+- Skim slide 8 to verify the floor and motto wording match
+  `CANON_AND_PHRASING.md`.
 
 ### 7.2. shots.txt and timing
 
