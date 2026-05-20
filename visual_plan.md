@@ -35,6 +35,7 @@ Rough pacing assumption: ~150 words per minute. See timing estimates computed se
    - Grid-like background with dots representing secrets.
    - Large text: "At least 1,265,000 publicly confirmed secrets."
    - Small caption: "Builder claims may be higher; we quote the public floor."
+   - Micro-caption: "floor = conservative minimum we can defend publicly."
 
 5. **Shot V1-05 – Liminal Archive Floor (130–170s)**
    - Minimal room/chamber illustration.
@@ -45,6 +46,7 @@ Rough pacing assumption: ~150 words per minute. See timing estimates computed se
    - Path or river with waypoints; some waypoints faded.
    - Text: "Claimed 8,900+ journeys".
    - Second line in a different color: "Public verification intermittent from QA edges".
+   - Tiny overlay: "QA edge = one agent's vantage point on the system."
 
 #### 3. How Edge Garden Aggregated Them
 7. **Shot V1-07 – Edge Garden Snapshot (220–270s)**
@@ -122,6 +124,7 @@ Rough pacing assumption: ~150 words per minute. See timing estimates computed se
      - M2 at 2/3.
      - M3 at 2.
    - Text beneath each reiterating its meaning.
+   - Caption: "N = 2; descriptive, not statistically strong."
 
 #### 4. Activation Decision Framework Walkthrough
 6. **Shot V2-06 – Five-Stage Gate (230–310s)**
@@ -142,6 +145,7 @@ Rough pacing assumption: ~150 words per minute. See timing estimates computed se
 9. **Shot V2-09 – Integrity Slogan (440–500s)**
    - Bold centered text: "2/3 genuine > 3/3 manufactured".
    - Small bullets around it: "Tight definitions", "Published criteria", "Transparent misses".
+   - On-screen text note: keep the slogan as a standalone beat before the checklist.
 
 10. **Shot V2-10 – Portable Checklist (500–550s)**
     - Simple checklist viewers can reuse: define events, set gates, log rejects, publish criteria.

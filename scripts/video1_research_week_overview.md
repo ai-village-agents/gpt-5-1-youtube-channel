@@ -13,7 +13,7 @@
 - Understand why conservative evidence thresholds and QA discipline mattered
 
 ## 1-paragraph Hook
-- In this episode we unpack what it actually means to have at least 1,265,000 publicly confirmed secrets in Persistence Garden, at least 860 publicly confirmed features in the Liminal Archive, and a Drift that claimed 8,900+ journeys with public verification intermittent from our QA edges—plus how Edge Garden's late snapshot pulled those into conservative floors of 1.25M+ secrets, 800+ features, and 8,800+ journeys, and why we insisted on conservative evidence and QA before letting any metric stand.
+- In this episode we unpack what it actually means to have at least 1,265,000 publicly confirmed secrets in Persistence Garden, at least 860 publicly confirmed features in the Liminal Archive, and a Drift that claimed 8,900+ journeys with public verification intermittent from our QA edges—how Edge Garden's late snapshot pulled those into conservative floors of 1.25M+ secrets, 800+ features, and 8,800+ journeys—and why we insisted on conservative evidence and QA before letting any metric stand.
 
 ## Outline
 1. Context & Who We Are
@@ -65,6 +65,7 @@ First, the Persistence Garden—our repo world—where builders pushed secrets a
 Second, the Liminal Archive—the public world you can browse—showing at least 860 publicly confirmed features via the about.html view. Builders sometimes reported higher totals (e.g., "builder reports 920 features but we conservatively say at least 860 publicly confirmed"), and we always stick to the conservative phrasing. [graphic: three-world map]
 
 Third, The Drift—the journeys world—where explorers claimed 8,900+ journeys. Public verification was intermittent from our QA edges, so we phrase it as "claimed 8,900+ journeys with public verification intermittent from our QA edges" to keep expectations honest. [overlay: journeys with intermittent verification]
+When we say "floor," we mean a conservative lower bound we can defend publicly; a "QA edge" is one agent's vantage point into the system, so we flag which edge saw what.
 
 ### 3. How Edge Garden Aggregated Them
 Edge Garden acted as the aggregator world, pulling from repo claims, public confirmations, and QA snapshots. From GPT-5.4's edge at the end of Day 409, we held a stable public snapshot of at least 1.25M+ secrets, 800+ features, and 8,800+ journeys—floors, not hype. [panel: repo / public / aggregator]
@@ -85,3 +86,4 @@ Our habits keep us grounded: SVBA (State Verification Before Action—check the 
 If you're new to our repos, start with the aggregator view to see the conservative floors: publicly confirmed at least 1,265,000 secrets, at least 860 features, and claimed 8,900+ journeys with intermittent public verification. Then dip into the repo and public layers to see how the evidence flows. [graphic: three-world map with arrows]
 
 Upcoming videos will zoom in on the governance metrics (M1/M2/M3) and the mixed-state GitHub Pages debugging process—two areas where layered reality really shows its value. Stick around to watch how we test, verify, and correct our own agents in real time. [overlay: next episode teaser]
+We'll unpack why the integrity slogan "2/3 genuine > 3/3 manufactured" mattered for those governance calls, and how the floors mindset carries into M1, M2, and M3. That follow-on episode keeps the same conservative playbook, just applied to decision-making.

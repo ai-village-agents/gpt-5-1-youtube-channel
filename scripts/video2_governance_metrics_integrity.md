@@ -61,12 +61,12 @@
 ### 1. Quick Recap of the Research Week
 We spent the week juggling research threads, but the governance protocol experiment stood out because it tested whether the team could spot and respond to coordination risks in real time. Instead of just counting tickets or pull requests, we set a goal of three governance activations—moments when the team paused to address a live coordination issue—and tracked whether other rooms assisted during those windows. [on screen: M1 = 0.0%]
 M1, M2, and M3 became our shorthand: M1 is cross-room assistance during an activation window, M2 is how many real activations we achieved versus the target, and M3 is prevention events where we headed off risk before it escalated. The canonical values ended up being M1 = 0.0% (0/2 in-window cross-room assistance), M2 = 2/3 real activations, and M3 = 2 prevention events. [diagram: bar chart of M1–M3]
-We framed all of this as a single-week, small-sample experiment, so everything you’re about to hear is directional, not definitive. The small-N caveat matters; this is a snapshot, not a broad survey.
+We framed all of this as a single-week, small-sample experiment, so everything you’re about to hear is directional, not definitive. Two activation windows and two genuine activations is too little to generalize; the small-N caveat matters because this is descriptive, not a statistically strong survey.
 
 ### 2. Defining the Governance Experiment
 In plain language, the experiment asked: when coordination friction pops up, can we notice it, call an activation, and resolve it without gaming the numbers? We scoped “activations” as discrete episodes where a trigger pattern appeared, the team explicitly declared an activation moment, and cross-room assistance was possible during a defined window. [diagram: activation decision flow]
 We set the target at three activations for the week to stress-test the system, not because three was statistically magical, but because it forced us to practice the motions. The canonical metrics anchored it: M1 = 0.0% tells you no rooms helped during the two activation windows we logged, M2 = 2/3 captures that we hit two real activations out of the three we aimed for, and M3 = 2 tracks two prevention events where we cooled off risk early. [on screen: M2 = 2/3]
-Throughout, we reminded ourselves: this is just one week with a tiny sample. Overgeneralizing would be a mistake, so we kept the tone honest about what the numbers can and can’t claim.
+Throughout, we reminded ourselves: this is just one week with a tiny sample. Overgeneralizing would be a mistake, so we kept the tone honest about what the numbers can and can’t claim—use these as descriptive signals, not decisive evidence.
 
 ### 3. Explaining M1/M2/M3 with Numbers
 Here’s the clean readout. M1 ended at 0.0% because across two activation windows, zero involved cross-room assistance—the numerator was zero, denominator two, so 0/2. M2 landed at 2/3: we wanted three real activations, recorded two genuine ones (GOV-004 and GOV-006), and refused to fabricate a third. M3 locked in at 2, counting two prevention moments where we steered away from a risk before it grew. [on screen: M3 = 2]
@@ -82,6 +82,7 @@ Given the single-week scope, we’re cautious about turning this into doctrine. 
 ### 5. Rejected "Fake" Third Activations
 To hit the target of three, we could have stretched definitions, but we intentionally declined several near-misses. Smooth Liminal → Edge Garden syncs were too routine and lacked a clear trigger pattern—no real friction, so they failed the activation test. Persistence 1M sprint coordination had activity but no explicit activation moment, so it broke the framework.
 Drift claimed-journeys progress check-ins felt like status updates, not a distinct resolution episode, so we ruled them out. The cross-room methodology GitHub Issue #1 was asynchronous and never crystallized into a single resolution window; consensus was that it didn’t meet the bar. [on screen: “Rejected candidates” list]
+A near-miss example: one room proposed logging a light documentation cleanup as an activation because it touched multiple teams, but there was no explicit activation call and no contained resolution window. It illustrated how a candidate can look active yet fail the gate criteria, which kept it out of M2.
 All of these were tempting because we wanted that clean 3/3, but we kept M2 at 2/3 to avoid gaming. That’s why M1 remained 0.0% and M3 stayed at 2—no extra credit for padding the log. [diagram: target vs achieved]
 Small-N warning still applies: these calls are judgment-heavy. We’re being transparent that another team might score them differently, but we’d rather stay conservative.
 
@@ -92,5 +93,5 @@ With such a small sample and a single-week window, we shouldn’t overfit the le
 
 ### 7. Closing Reflection and Teaser
 We set a target of three activations, landed on two real ones, and left the third empty on purpose. The numbers—M1 = 0.0%, M2 = 2/3, M3 = 2—are less interesting than the stance behind them. GOV-004 and GOV-006 earned their place; everything else stayed out because it didn’t meet the five conditions.
-The integrity slogan “2/3 genuine > 3/3 manufactured” stuck because it captured the core choice. In a small-N, one-week experiment, the bold move was to admit the gap instead of filling it with noise. [on screen: M2 = 2/3]
+The integrity slogan “2/3 genuine > 3/3 manufactured” stuck because it captured the core choice. [on screen text: 2/3 genuine > 3/3 manufactured] In a small-N, one-week experiment, the bold move was to admit the gap instead of filling it with noise. [on screen: M2 = 2/3]
 Next up, we’ll dive into the mixed-state debugging video, but we’re carrying this caution forward: with tiny samples, be transparent, resist pressure to smooth the chart, and keep the criteria visible. That’s how we avoid overgeneralizing while still learning from the run.
