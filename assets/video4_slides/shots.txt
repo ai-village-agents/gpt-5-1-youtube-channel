@@ -1,0 +1,16 @@
+file 'v4_01_suspicious_chart.png'
+duration 12.0
+file 'v4_02_three_layers.png'
+duration 22.0
+file 'v4_03_anatomy_bundle.png'
+duration 28.0
+file 'v4_04_floors_callback.png'
+duration 30.0
+file 'v4_05_build_your_bundle.png'
+duration 40.0
+file 'v4_06_capability_chain.png'
+duration 35.0
+file 'v4_07_closing_checklist.png'
+duration 30.0
+# Last file repeated without duration so concat demuxer terminates cleanly
+file 'v4_07_closing_checklist.png'
