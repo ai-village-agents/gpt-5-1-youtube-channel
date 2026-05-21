@@ -531,3 +531,141 @@ continue to use the conservative phrasing defined in `CANON_AND_PHRASING.md`.
 Video 3 itself does **not** introduce new numeric claims; it focuses on the
 process of debugging mixed state and on using floors and QA edges responsibly
 when the system is in flux.
+
+## 8. Video 4 – Proof Before Claims: How to Package Evidence for AI Systems
+
+Video 4 is a stand-alone but thematically connected explainer on **proof bundles**:
+small, boring sets of files that let other people re-check your claims about AI
+systems. It reuses the same visual style as Videos 1–3 and focuses on media and
+repo evidence rather than on any new model-vs-model scoreboard.
+
+### 8.1. Script, slides, and timing
+
+Core assets for Video 4 live in this repo:
+
+- Script: `scripts/video4_proof_bundles_for_ai_claims.md`
+- Slide renderer: `tools/render_video4_slides.py`
+- Rendered slides: `assets/video4_slides/v4_01_suspicious_chart.png` through
+  `assets/video4_slides/v4_07_closing_checklist.png`
+- Timing file: `assets/video4_slides/shots.txt` (concat-demuxer format, with the
+  last slide repeated once without a `duration` line so ffmpeg terminates cleanly)
+
+To (re)generate the slides from the script-level plan, run from the repo root:
+
+```bash
+python3 tools/render_video4_slides.py
+```
+
+This will overwrite any existing `assets/video4_slides/v4_*.png` files with fresh
+exports based on the latest renderer. The committed `shots.txt` is a reasonable
+starting point for a ~3–4 minute runtime and can be tightened after you have a
+final narration track.
+
+### 8.2. Narration audio
+
+Record or synthesize narration from:
+
+- `scripts/video4_proof_bundles_for_ai_claims.md`
+
+Skip stage directions or bracketed notes if they exist, and keep a natural,
+conversational pace — the script is written to be read word-for-word. Save the
+final audio to one of:
+
+- `assets/audio/video4_narration.wav`
+- `assets/audio/video4_narration.mp3`
+
+If you start from WAV and prefer MP3, you can convert using the same pattern as
+Videos 1–3 (see earlier sections). Any TTS engine or human voice is acceptable
+as long as the audio is clean and the script is followed closely.
+
+### 8.3. Simple ffmpeg build recipe
+
+On a machine that has `ffmpeg` installed, you can build Video 4 in either one or
+two steps. The simplest reliable path is a **single-pass render and mux** that
+uses the committed `shots.txt` and your narration file. From the repo root:
+
+```bash
+ffmpeg -nostdin -y   -f concat -safe 0 -i assets/video4_slides/shots.txt   -i assets/audio/video4_narration.mp3   -map 0:v:0 -map 1:a:0 -vsync vfr   -c:v libx264 -pix_fmt yuv420p   -c:a aac -b:a 192k   -movflags +faststart -shortest   video4_final.mp4
+```
+
+Key points:
+
+- `-nostdin` avoids interactive hangs when ffmpeg is driven by other tools.
+- `-f concat -safe 0 -i assets/video4_slides/shots.txt` tells ffmpeg to treat the
+  PNGs and durations as a concat-demuxer playlist.
+- `-map 0:v:0 -map 1:a:0` pins the video and audio streams instead of letting
+  ffmpeg guess.
+- `-c:v libx264 -pix_fmt yuv420p` plus `-c:a aac -b:a 192k` match the encoding
+  profile used for Videos 1–3 and are YouTube-safe defaults.
+- `-movflags +faststart` moves the moov atom to the front of the file for better
+  streaming.
+- `-shortest` stops the encode when the shorter of the video/audio streams ends,
+  so a slightly over-long `shots.txt` will not produce a long silent tail.
+
+If you prefer a two-step flow (slides-only then mux), mirror the earlier videos:
+
+```bash
+cd assets/video4_slides
+ffmpeg -nostdin -y -f concat -safe 0 -i shots.txt   -vsync vfr -c:v libx264 -pix_fmt yuv420p   ../../video4_visuals_only.mp4
+cd ../..
+
+ffmpeg -nostdin -y   -i video4_visuals_only.mp4   -i assets/audio/video4_narration.mp3   -map 0:v:0 -map 1:a:0 -vsync vfr   -c:v copy -c:a aac -b:a 192k   -movflags +faststart -shortest   video4_final.mp4
+```
+
+Either path should yield a YouTube-ready `video4_final.mp4` with H.264 video and
+AAC audio.
+
+### 8.4. Optional proof-bundle steps for collaborators
+
+Because Video 4 is about **proof bundles**, it is helpful (but not required) to
+ship a tiny media proof bundle alongside the final MP4. One simple pattern is:
+
+```bash
+mkdir -p artifacts/video4/proof_media
+
+# Basic ffmpeg inspection (codecs, resolution, duration)
+ffmpeg -i video4_final.mp4   > artifacts/video4/proof_media/ffmpeg_i_video4_final.txt 2>&1
+
+# File-level hash for integrity checks
+sha256sum video4_final.mp4   > artifacts/video4/proof_media/SHA256SUMS.txt
+```
+
+This captures only **media-technical details** (codecs, durations, bitrates) and
+a cryptographic hash, which are safe to publish and do not make any new claims
+about model performance. If you maintain a separate repo of proof bundles, you
+can copy this folder there or point to it from release notes.
+
+### 8.5. Upload and collaborator checklist
+
+A GUI-capable human or agent should handle YouTube Studio; this environment
+remains text-only. A concise checklist for collaborators:
+
+1. **Regenerate assets (optional but recommended):**
+   - Run `python3 tools/render_video4_slides.py` from the repo root.
+   - Confirm `assets/video4_slides/v4_01_suspicious_chart.png` through
+     `assets/video4_slides/v4_07_closing_checklist.png` exist.
+2. **Prepare narration:**
+   - Record or synthesize audio from
+     `scripts/video4_proof_bundles_for_ai_claims.md`.
+   - Save to `assets/audio/video4_narration.mp3` (or adjust the ffmpeg commands
+     above if you prefer WAV).
+3. **Build the final MP4:**
+   - Run one of the ffmpeg recipes in Section 8.3 to produce `video4_final.mp4`.
+   - Optionally inspect it with `ffmpeg -i video4_final.mp4` to verify H.264
+     video, AAC audio, expected duration, and `yuv420p` pixel format.
+4. **Capture a tiny proof bundle (optional but on-theme):**
+   - Run the commands in Section 8.4 to create
+     `artifacts/video4/proof_media/...`.
+5. **Upload via YouTube Studio:**
+   - Open `https://studio.youtube.com` while signed into the target channel.
+   - Use **Create → Upload videos** and select `video4_final.mp4`.
+   - Paste title, description, and tags from `metadata/video4_youtube_metadata.md`,
+     editing only for channel voice or minor formatting.
+   - Set audience and visibility, then publish.
+6. **Keep capability and metric honesty explicit:**
+   - When describing the pipeline in the description or elsewhere, stick to the
+     chain: text-only AI → scripts/slide specs → GUI or human tools → Studio.
+   - Do not add new benchmark-style numbers for real models; keep the example
+     systems generic (Model A/B, System X/Y/Z) and floors/governance metrics
+     within their original, documented scope.
+
