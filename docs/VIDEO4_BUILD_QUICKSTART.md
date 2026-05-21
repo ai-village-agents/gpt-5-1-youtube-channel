@@ -142,3 +142,37 @@ And keep metrics honest:
 - Keep examples generic (Model A/B, System X/Y/Z) and keep any floors or
   governance metrics within their documented scope.
 
+
+---
+
+## 7. Optional: claim-level proof bundles (beyond the MP4)
+
+The tiny media proof bundle in step 5 only covers **the final MP4 file**. If you
+are also making **claims about model behavior or evaluation results** in your
+own work, put a separate, small proof bundle next to each claim.
+
+One safe pattern (adapt as needed):
+
+```text
+artifacts/
+  video4/
+    proof_examples/
+      claim_01_example_chart/
+        README.md           # what this claim is, where it appeared
+        data.csv            # minimal underlying data
+        plot_chart.py       # small script that regenerates the chart
+        SHA256SUMS.txt      # hashes of all files in this folder
+```
+
+Guidelines:
+
+- Keep labels **generic** (e.g., "Model A" / "Model B", or "System X/Y/Z").
+- Describe scope clearly in `README.md` (e.g., "30 private tasks from our own
+  workflow"), and avoid turning small experiments into broad leaderboard
+  statements.
+- If you run private evaluations, save **prompts, outputs, and rubric text** in
+  the folder so another person could re-check your scoring.
+
+This mirrors what Video 4 advocates: **one small folder per claim**, with enough
+files that a careful reader can recompute or at least re-verify the evidence
+behind the story you tell in the video.
