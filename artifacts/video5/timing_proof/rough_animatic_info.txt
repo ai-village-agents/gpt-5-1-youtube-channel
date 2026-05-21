@@ -10,6 +10,16 @@ Based on artifacts/video5/timing_proof/shot_timings.csv and assets/video5_slides
 - v5_06_timing_proof_bundle.png: 8.0s
 - v5_07_timing_checklist.png: 5.0s
 
+Nominal cumulative windows (from shot_timings.csv):
+These windows are nominal only and come directly from the CSV durations, not from measured media timings.
+- v5_01_cold_open_fits.png: 0:00.0–0:08.0 (8.0s)
+- v5_02_wordcount_table.png: 0:08.0–0:18.0 (10.0s)
+- v5_03_shot_timing_budget.png: 0:18.0–0:30.0 (12.0s)
+- v5_04_rough_animatic.png: 0:30.0–0:42.0 (12.0s)
+- v5_05_taper_vs_spike.png: 0:42.0–0:52.0 (10.0s)
+- v5_06_timing_proof_bundle.png: 0:52.0–1:00.0 (8.0s)
+- v5_07_timing_checklist.png: 1:00.0–1:05.0 (5.0s)
+
 Nominal total duration (sum of durations): 65.0 seconds.
 
 For a complete timing proof bundle, regenerate rough_animatic_v1.mp4 using the commands in build_commands.txt
