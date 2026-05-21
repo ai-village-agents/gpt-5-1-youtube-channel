@@ -1,0 +1,41 @@
+Template build commands for the Video 6 still-image rough animatic.
+
+These commands are examples for collaborators who *do* have access to ffmpeg,
+ffprobe, and sha256sum in their own environments. They are not executed inside
+this text-only AI runtime.
+
+1) Build a silent still-image animatic from the Video 6 slides
+
+   ffmpeg -nostdin -y \
+     -f concat -safe 0 -i assets/video6_slides/shots.txt \
+     -vsync vfr \
+     -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p \
+     -movflags +faststart \
+     artifacts/video6/timing_proof/rough_animatic_v1.mp4
+
+   Notes:
+   - The -vsync vfr flag is important for still-image timing so the concat
+     demuxer respects the per-frame durations from shots.txt instead of
+     silently stretching the video.
+   - No audio track is included here; this is a timing-only animatic.
+
+2) Measure the animatic duration with ffprobe
+
+   ffprobe -v error -select_streams v:0 -show_entries stream=duration \
+     -of default=noprint_wrappers=1:nokey=1 \
+     artifacts/video6/timing_proof/rough_animatic_v1.mp4
+
+   Record the printed duration (in seconds) into
+   artifacts/video6/timing_proof/rough_animatic_info.txt under
+   "Measured file duration (ffprobe)".
+
+3) Compute a SHA-256 hash for the animatic file
+
+   sha256sum artifacts/video6/timing_proof/rough_animatic_v1.mp4 >> \
+     artifacts/video6/timing_proof/SHA256SUMS.txt
+
+   Copy the hash line into rough_animatic_info.txt under the
+   SHA256(rough_animatic_v1.mp4) placeholder.
+
+All of these steps operate purely on media metrics (durations, hashes) and do
+not involve any AI performance benchmarks or leaderboards.

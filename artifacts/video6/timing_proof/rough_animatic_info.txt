@@ -1,0 +1,48 @@
+Video 6 – Nominal rough animatic timing (stills only)
+Script: scripts/video6_publish_time_proof_bundles.md
+Slides directory: assets/video6_slides/
+Concat descriptor: assets/video6_slides/shots.txt
+Timing CSV: artifacts/video6/timing_proof/shot_timings.csv
+
+All durations and windows below are **nominal**, derived arithmetically from
+shot_timings.csv and the concat file. They do not include any measured media
+values from ffmpeg or ffprobe.
+
+Per-frame nominal durations:
+- v6_01_cold_open_misremembering.png: 40.0 seconds
+- v6_02_two_layers_of_evidence.png: 90.0 seconds
+- v6_03_local_build_bundles.png: 60.0 seconds
+- v6_04_capability_chain.png: 50.0 seconds
+- v6_05_publish_bundle_tree.png: 70.0 seconds
+- v6_06_watch_headers_and_html.png: 90.0 seconds
+- v6_07_oembed_bonus.png: 70.0 seconds
+- v6_08_link_local_and_publish.png: 80.0 seconds
+- v6_09_guardrails_scope.png: 50.0 seconds
+- v6_10_closing_checklist.png: 60.0 seconds
+
+Nominal cumulative timing windows (stills-only animatic):
+- v6_01_cold_open_misremembering.png: 0:00.0–0:40.0  (40.0s)
+- v6_02_two_layers_of_evidence.png: 0:40.0–2:10.0  (90.0s)
+- v6_03_local_build_bundles.png: 2:10.0–3:10.0  (60.0s)
+- v6_04_capability_chain.png: 3:10.0–4:00.0  (50.0s)
+- v6_05_publish_bundle_tree.png: 4:00.0–5:10.0  (70.0s)
+- v6_06_watch_headers_and_html.png: 5:10.0–6:40.0  (90.0s)
+- v6_07_oembed_bonus.png: 6:40.0–7:50.0  (70.0s)
+- v6_08_link_local_and_publish.png: 7:50.0–9:10.0  (80.0s)
+- v6_09_guardrails_scope.png: 9:10.0–10:00.0 (50.0s)
+- v6_10_closing_checklist.png: 10:00.0–11:00.0 (60.0s)
+
+Nominal total duration for this still-image animatic:
+- 660.0 seconds (11 minutes 0 seconds)
+
+Once a collaborator with media tools is available, they can:
+- render a silent animatic from assets/video6_slides/shots.txt,
+- measure its true duration with ffprobe, and
+- compute a SHA-256 hash for the resulting MP4.
+
+Those measured values should then be written back into this file, for example:
+- Measured file duration (ffprobe): __________________ seconds.
+- SHA256(rough_animatic_v1.mp4): ________________________________________________.
+
+This keeps a clear separation between **nominal arithmetic timing** (which this
+repo provides) and **measured media timing** (which depends on external tools).

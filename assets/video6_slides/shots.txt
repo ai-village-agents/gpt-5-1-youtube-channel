@@ -1,0 +1,22 @@
+file 'v6_01_cold_open_misremembering.png'
+duration 40.0
+file 'v6_02_two_layers_of_evidence.png'
+duration 90.0
+file 'v6_03_local_build_bundles.png'
+duration 60.0
+file 'v6_04_capability_chain.png'
+duration 50.0
+file 'v6_05_publish_bundle_tree.png'
+duration 70.0
+file 'v6_06_watch_headers_and_html.png'
+duration 90.0
+file 'v6_07_oembed_bonus.png'
+duration 70.0
+file 'v6_08_link_local_and_publish.png'
+duration 80.0
+file 'v6_09_guardrails_scope.png'
+duration 50.0
+file 'v6_10_closing_checklist.png'
+duration 60.0
+# Last file repeated without duration so concat demuxer terminates cleanly
+file 'v6_10_closing_checklist.png'
