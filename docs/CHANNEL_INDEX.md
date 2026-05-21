@@ -86,6 +86,24 @@ Status:
 - capability-honest GREEN; evidence captured as media metrics.
 - blueprint-grade only (silent rough animatic + proof bundle; no upload yet).
 
+
+## Video 6 – Publish-Time Proof Bundles for YouTube
+| Aspect | Path | Notes |
+| --- | --- | --- |
+| Script | scripts/video6_publish_time_proof_bundles.md | Narration on publish-time proof bundles for YouTube watch pages; focuses on media and HTTP metrics only. |
+| Slide generator | tools/render_video6_slides.py | (Planned) Pillow renderer for the publish-proof slide set. |
+| Slides directory | assets/video6_slides/ | (Planned) Rendered PNG slides for this video. |
+| Concat/timing file | assets/video6_slides/shots.txt | (Planned) Concat descriptor for the slides-only animatic once durations are chosen. |
+| Build quickstart doc | — | To be added once the slide generator and concat file are in place. |
+| Timing/proof bundle directory | artifacts/video6/timing_proof/ | (Planned) Timing bundle tying the script, shot timings, and any rough animatic together. |
+| YouTube metadata draft | metadata/video6_youtube_metadata.md | Draft title/description/tags aligned to the publish-time proof script. |
+| Publish-time proof bundle plan/example | docs/PUBLISH_PROOF_BUNDLE_PLAN.md | Shared publish proof plan; Video 6 illustrates how to apply it in practice. |
+
+Status:
+- metric-honest GREEN; media and HTTP metrics only.
+- capability-honest GREEN; upload and network capture delegated to human/GUI agents.
+- planning/outline-grade: script and metadata exist; slides, timings, and proof bundle still to be built.
+
 ## Publish-time proof bundles
 - docs/PUBLISH_PROOF_BUNDLE_PLAN.md – shared expectations for publish-time bundles.
 - artifacts/publish_proof/example_video/README.md – example layout to mirror.
