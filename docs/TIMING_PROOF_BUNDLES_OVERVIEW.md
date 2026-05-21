@@ -8,18 +8,40 @@ Timing proof bundles are media-side evidence packages about pacing and structure
 - Text summary file (e.g., `rough_animatic_info.txt`) that records nominal vs measured duration and, optionally, a SHA-256 of the rendered animatic.
 - Pointers to any loudness or QC checks if audio exists, so reviewers know where to look for waveform evidence.
 
+All of these numbers are media-side metrics (wordcounts, timings, hashes). None of them are model scores or capability benchmarks.
+
 ## How this shows up in this repo
 ### Video 4 – Claim-level proof example
 Video 4 focuses on claim-level proof bundles using synthetic Systems X/Y. Its timing/proof example lives under `artifacts/video4/proof_examples/`, with synthetic CSV, plot, and hash artifacts that illustrate the format.
 
+The intent is to show *shape*, not to report on any real model. Every number in that directory is fictional and clearly documented as such.
+
 ### Video 5 – Timing proof bundle
-Video 5 includes a full timing proof bundle under `artifacts/video5/timing_proof/`: `script_wordcount.txt` (1439-word total); `shot_timings.csv` and `assets/video5_slides/shots.txt` (both summing to 65.0 seconds nominal); `rough_animatic_info.txt` with blanks for collaborator-measured `ffprobe` duration and SHA-256; and `build_commands.txt` with template `ffmpeg`/`ffprobe` invocations.
+Video 5 includes a full timing proof bundle under `artifacts/video5/timing_proof/`.
+
+The key pieces are:
+- `script_wordcount.txt` – paragraph-level counts for the **1439-word** Video 5 script.
+- `shot_timings.csv` – a filename + duration table for the seven-slide still-image animatic, summing to **65.0 seconds nominal**.
+- `assets/video5_slides/shots.txt` – the concat descriptor that matches `shot_timings.csv` line-for-line.
+- `rough_animatic_info.txt` – a text summary that now:
+  - lists the nominal per-shot durations,
+  - records **nominal cumulative timing windows** (for example, `v5_05_taper_vs_spike.png: 0:42.0–0:52.0 (10.0s)`),
+  - states the nominal total of **65.0 seconds**, and
+  - leaves explicit blanks for a collaborator to fill in the **measured file duration** and **SHA-256 hash** once they build `rough_animatic_v1.mp4` and run media tools.
+- `build_commands.txt` – template `ffmpeg` / `ffprobe` commands that a human or GUI-capable agent can run in an environment where those tools are actually installed.
+
+Two clarifications that matter for metric honesty:
+- The **65.0-second still-image animatic** is a compact, seven-shot teaching sequence that demonstrates how to budget and inspect timing. It is not a promise that the entire 1439-word script is delivered in 65 seconds.
+- Within the narration we also use a **173-word toy example** to teach words-per-second math. That 173-word text is an *illustrative subset*, not the full script. The timing proof bundle is anchored on the real script wordcount and the separate 65.0-second animatic asset.
 
 ## For future videos
 - Count words by paragraph and record the total.
 - Lock a concat/timing file and mirror it in CSV form.
 - Build a still-image animatic with `-vsync vfr`, then measure it.
 - Record duration and hash in a text file alongside the animatic info.
+- If it helps review, add **nominal cumulative timing windows** derived from the CSV so you can talk about specific segments (for example, "Shot 6 lives roughly from 0:27.5–0:40.0"). Make sure those windows are clearly labeled as *nominal* unless they come from measured media.
 - Keep everything together in a single `timing_proof/` directory for easy review.
 
-All numbers here are media-side metrics (wordcounts, timings, hashes), not model scores or capability claims.
+Throughout, stay strict about scope:
+- Timing proof bundles speak about media artifacts (scripts, images, audio, video) and their measurable properties.
+- They do **not** make or support new AI performance leaderboards.
