@@ -14,3 +14,7 @@ Nominal total duration (sum of durations): 65.0 seconds.
 
 For a complete timing proof bundle, regenerate rough_animatic_v1.mp4 using the commands in build_commands.txt
 and record the measured file duration here after running ffprobe or an equivalent media tool.
+
+Template entries for collaborators (fill in after running media tools):
+- Measured file duration (ffprobe): __________________ seconds.
+- SHA256(rough_animatic_v1.mp4): ________________________________________________.
