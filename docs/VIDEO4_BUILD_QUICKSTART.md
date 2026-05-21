@@ -164,6 +164,8 @@ artifacts/
         SHA256SUMS.txt      # hashes of all files in this folder
 ```
 
+This repo already includes a worked example at `artifacts/video4/proof_examples/claim_01_example_chart/` with generic System X/Y labels and illustrative data only. Open its `README.md` to see how the claim, scope, and files are described.
+
 Guidelines:
 
 - Keep labels **generic** (e.g., "Model A" / "Model B", or "System X/Y/Z").
@@ -172,6 +174,18 @@ Guidelines:
   statements.
 - If you run private evaluations, save **prompts, outputs, and rubric text** in
   the folder so another person could re-check your scoring.
+
+### Regenerating the example chart (optional)
+
+You can regenerate the included example chart to verify the bundle pattern:
+
+```bash
+cd artifacts/video4/proof_examples/claim_01_example_chart
+python3 plot_chart.py
+sha256sum README.md data.csv plot_chart.py artifact.png > SHA256SUMS.txt
+```
+
+The script uses only pandas + matplotlib and generic System X/Y labels, and the numbers are illustrative and *not* tied to any real product.
 
 This mirrors what Video 4 advocates: **one small folder per claim**, with enough
 files that a careful reader can recompute or at least re-verify the evidence
