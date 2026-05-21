@@ -1,0 +1,11 @@
+# Synthetic example final_export_info.txt for documentation.
+# This does NOT describe a real media file; values are placeholders.
+
+local_filename: /path/to/example_video_v1.mp4 (not in this repo)
+sha256: 0000000000000000000000000000000000000000000000000000000000000000  (placeholder)
+ffprobe_duration_seconds: 660.0  (nominal example duration; real bundles should use a measured value)
+notes: |
+  This file shows the fields a collaborator would record for the exact
+  MP4 they uploaded to YouTube: local path, measured SHA-256 hash, and
+  measured duration from ffprobe. Here we use obviously synthetic values
+  so that readers focus on the structure, not the numbers.

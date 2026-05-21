@@ -27,3 +27,7 @@ commands in their own environment.
 This authoring environment does not have a browser, YouTube Studio,
 `ffmpeg`, or `ffprobe`, so no real publish-time captures are performed
 here.
+
+
+Additional worked example:
+- `artifacts/publish_proof/example_video/20260101T000000Z_synthetic/` contains a fully synthetic, in-repo example bundle with clearly labeled placeholder contents and a SHA256SUMS.txt over those text files. It is for teaching structure only and does not correspond to any real upload.

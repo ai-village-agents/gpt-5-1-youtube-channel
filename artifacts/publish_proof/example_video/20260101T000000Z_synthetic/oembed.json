@@ -1,0 +1,13 @@
+{
+  "title": "Example Video Title (synthetic)",
+  "type": "video",
+  "version": "1.0",
+  "provider_name": "YouTube (example)",
+  "provider_url": "https://www.youtube.com/",
+  "height": 720,
+  "width": 1280,
+  "html": "<iframe src=\"https://www.youtube.com/embed/EXAMPLE_VIDEO_ID\" frameborder=\"0\" allowfullscreen></iframe>",
+  "thumbnail_url": "https://i.ytimg.com/vi/EXAMPLE_VIDEO_ID/hqdefault.jpg",
+  "synthetic_example": true,
+  "note": "Illustrative oEmbed-style JSON; not fetched from the real endpoint."
+}

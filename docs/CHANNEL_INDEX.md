@@ -90,19 +90,19 @@ Status:
 ## Video 6 – Publish-Time Proof Bundles for YouTube
 | Aspect | Path | Notes |
 | --- | --- | --- |
-| Script | scripts/video6_publish_time_proof_bundles.md | Narration on publish-time proof bundles for YouTube watch pages; focuses on media and HTTP metrics only. |
-| Slide generator | tools/render_video6_slides.py | (Planned) Pillow renderer for the publish-proof slide set. |
-| Slides directory | assets/video6_slides/ | (Planned) Rendered PNG slides for this video. |
-| Concat/timing file | assets/video6_slides/shots.txt | (Planned) Concat descriptor for the slides-only animatic once durations are chosen. |
-| Build quickstart doc | — | To be added once the slide generator and concat file are in place. |
-| Timing/proof bundle directory | artifacts/video6/timing_proof/ | (Planned) Timing bundle tying the script, shot timings, and any rough animatic together. |
-| YouTube metadata draft | metadata/video6_youtube_metadata.md | Draft title/description/tags aligned to the publish-time proof script. |
-| Publish-time proof bundle plan/example | docs/PUBLISH_PROOF_BUNDLE_PLAN.md | Shared publish proof plan; Video 6 illustrates how to apply it in practice. |
+| Script | scripts/video6_publish_time_proof_bundles.md | Narration on publish-time proof bundles for YouTube watch pages; focuses on media and HTTP metrics only. Script is 1231 words across 20 paragraphs (see artifacts/video6/timing_proof/script_wordcount.txt). |
+| Slide generator | tools/render_video6_slides.py | Pillow renderer for the 10-slide publish-time proof bundle explainer. |
+| Slides directory | assets/video6_slides/ | Rendered PNG slides (v6_01_… through v6_10_…) for this video. |
+| Concat/timing file | assets/video6_slides/shots.txt | Concat descriptor for the still-image animatic; nominal durations sum to 660.0 seconds (11:00) and are mirrored in artifacts/video6/timing_proof/shot_timings.csv. |
+| Build quickstart doc | docs/VIDEO6_BUILD_QUICKSTART.md | Regeneration, ffmpeg rough-animatic, and timing-capture guide for Video 6. |
+| Timing/proof bundle directory | artifacts/video6/timing_proof/ | Timing proof bundle with script wordcount, per-shot timings, nominal animatic windows, and build commands; collaborators can fill in measured duration and SHA-256 once they render the rough animatic. |
+| YouTube metadata draft | metadata/video6_youtube_metadata.md | Draft title/description/tags aligned to the publish-time proof bundle script. |
+| Publish-time proof bundle plan/example | docs/PUBLISH_PROOF_BUNDLE_PLAN.md | Shared publish proof plan that Video 6 teaches; concrete publish-time bundles will live under artifacts/publish_proof/. |
 
 Status:
-- metric-honest GREEN; media and HTTP metrics only.
-- capability-honest GREEN; upload and network capture delegated to human/GUI agents.
-- planning/outline-grade: script and metadata exist; slides, timings, and proof bundle still to be built.
+- metric-honest GREEN; timing and HTTP/publish metrics only, no AI performance numbers.
+- capability-honest GREEN; all network capture, ffmpeg, and upload work are delegated to collaborators with real tools.
+- blueprint-grade: scripts, slides, concat, and timing proof bundle are in-repo; final narration, rendered animatic, and publish-time capture still to be done off-box.
 
 ## Publish-time proof bundles
 - docs/PUBLISH_PROOF_BUNDLE_PLAN.md – shared expectations for publish-time bundles.

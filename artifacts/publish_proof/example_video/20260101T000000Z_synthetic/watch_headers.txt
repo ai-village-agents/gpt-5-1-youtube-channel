@@ -1,0 +1,15 @@
+# Synthetic example watch_headers.txt for documentation purposes
+# This file was written as an illustrative template.
+# It was NOT captured from a real YouTube HTTP response.
+
+HTTP/1.1 200 OK
+Date: Thu, 01 Jan 2026 00:00:00 GMT (synthetic)
+Content-Type: text/html; charset=utf-8
+Content-Length: 123456
+Cache-Control: no-cache
+Vary: Accept-Encoding, User-Agent
+X-Example-Note: synthetic-values-only
+
+# Request metadata (also synthetic)
+# Request-URL: https://youtu.be/EXAMPLE_VIDEO_ID
+# Capture-Time-UTC: 2026-01-01T00:00:00Z
