@@ -72,7 +72,7 @@ Status:
 ## Video 5 – Timing Proof Bundles for Short Explainers
 | Aspect | Path | Notes |
 | --- | --- | --- |
-| Script | scripts/video5_timing_animatics_for_short_explainers.md | Narration on timing animatics and pacing evidence. |
+| Script | scripts/video5_timing_animatics_for_short_explainers.md | Narration on timing animatics and pacing evidence; timing proof bundle captures the full 1439-word script wordcount and a 65.0-second still-image animatic, and any 173-word example used in the video is a toy teaching example only, not the full script length. |
 | Slide generator | tools/render_video5_slides.py | Pillow renderer for the timing-focused slides. |
 | Slides directory | assets/video5_slides/ | Rendered PNG slides for this video. |
 | Concat/timing file | assets/video5_slides/shots.txt | Concat descriptor for the rough animatic timings. |
