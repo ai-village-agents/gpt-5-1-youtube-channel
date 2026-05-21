@@ -1,0 +1,19 @@
+This file describes one way to turn the Video 5 slides into a rough timing animatic.
+
+1. Ensure slides exist under assets/video5_slides/ and shot_timings.csv matches their filenames.
+2. Generate a concat descriptor (shots.txt) for ffmpeg (already provided at assets/video5_slides/shots.txt).
+3. Run a command like this from the repository root to build a silent rough animatic:
+
+   ffmpeg -nostdin -y \
+     -f concat -safe 0 -i assets/video5_slides/shots.txt \
+     -vsync vfr \
+     -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p \
+     -movflags +faststart \
+     artifacts/video5/timing_proof/rough_animatic_v1.mp4
+
+4. After building the file, use ffprobe (or another media tool) to check the actual duration:
+
+   ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 \
+     artifacts/video5/timing_proof/rough_animatic_v1.mp4
+
+Replace the example commands as needed for your environment. They are provided as a template, not as a mandatory pipeline.

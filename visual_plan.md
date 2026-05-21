@@ -234,3 +234,57 @@ Rough pacing assumption: ~150 words per minute. See timing estimates computed se
 
 7. **Shot V4-07 – Closing Checklist (380–440s)**
    - Five-line on-screen checklist: Name claim / Collect files / Hash them / Tiny README / Story on top.
+
+---
+## Video 5 – Timing a One-Minute Explainer: From Wordcount to Animatic
+
+### Overall Visual Style
+- Reuse the dark, text-first slide style from Videos 3–4.
+- Keep layouts simple: one main idea per slide, centered titles, generous margins.
+- Use subtle timing metaphors (timelines, tiny clocks, simple tables) instead of busy artwork.
+- Favor large, readable text so viewers can screenshot the closing checklist.
+
+### Shot List by Section
+
+1. **Shot V5-01 – Does this script actually fit? (cold open)**
+   - Visual: Split screen. On the left, a dense single-page script with a few highlighted paragraphs. On the right, a labeled bar or bracket: "Target: 60–75 seconds" with a question mark.
+   - On-screen microcopy: "It *feels* like a minute… but does it fit?"
+   - Purpose: Pose the core question and introduce the idea that intuition alone is not enough.
+
+2. **Shot V5-02 – Wordcount sanity check (2.8–3.0 words/second)**
+   - Visual: Clean table with four columns: "Paragraph", "Words", "@ 3.0 wps", "@ 2.8 wps".
+   - Include a highlighted total row: "Total: 173 words → ~57.7s @ 3.0, ~61.8s @ 2.8".
+   - Emphasis styling on the range label: "Fits a ~60–75s window" and a small note: "Almost no spare spoken budget".
+   - Purpose: Make the rule-of-thumb concrete and show why counting per paragraph is useful.
+
+3. **Shot V5-03 – Turn words into a shot-level timing budget**
+   - Visual: Horizontal bar made of boxes labeled Shot 1–Shot 11, each with a small time range (e.g., "5–6s", "7–8s", "12–13s"). Shots 4–7 are visually heavier.
+   - Add a small legend: "Heavier = main evidence", "Lighter = labels or callbacks".
+   - Highlight that Shots 8–11 sit in the late sequence, with 8 and 9 clearly shorter or marked "optional".
+   - Purpose: Show how a timing budget allocates space so late additions do not steal time from the proof chain.
+
+4. **Shot V5-04 – Rough animatic: still frames with real timings**
+   - Visual: On the left, a 3×3 grid of rough storyboard frames. On the right, a simple media player mock labeled "rough_animatic_v1.mp4" showing a timestamp around 61s.
+   - Include a tiny table or code-like box: `frame,duration_seconds` with a few example rows.
+   - Small caption: "Build a low-fidelity video from frames + durations." and another note: "Check the *file* duration, not just the sum.".
+   - Purpose: Demystify rough animatics and connect them directly to file-level timing evidence.
+
+5. **Shot V5-05 – Taper vs spike: shaping the ending**
+   - Visual: Two mini timelines stacked vertically.
+     - Top: "taper" – bars that gradually shrink toward the end, labeled "pattern label", "habit", "callback".
+     - Bottom: "spike" – small bars followed by a dense cluster at the very end, labeled "late collage".
+   - Highlight the middle section on both timelines as "main evidence" and mark it as the proper center of gravity.
+   - Purpose: Give viewers a visual contrast between a calm landing and a rushed final collage.
+
+6. **Shot V5-06 – Timing proof bundle folder**
+   - Visual: Folder icon labeled `timing_proof/` with three or four file names underneath: `script_wordcount.txt`, `shot_timings.csv`, `build_commands.txt`, `rough_animatic_info.txt`.
+   - Small caption: "Tiny timing artifacts that make pacing decisions reproducible.".
+   - Purpose: Connect timing work back to the broader proof-bundle idea from Video 4.
+
+7. **Shot V5-07 – Three-step timing checklist (closing)**
+   - Visual: Large, centered checklist with three items and simple icons:
+     1. "Count the words" (page icon)
+     2. "Budget the shots" (timeline icon)
+     3. "Build one rough animatic" (small video file icon)
+   - Leave ample whitespace so the slide works as a screenshot reference.
+   - Purpose: Give viewers a compact, memorable summary of the method.
