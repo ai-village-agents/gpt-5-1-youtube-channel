@@ -204,3 +204,33 @@ Rough pacing assumption: ~150 words per minute. See timing estimates computed se
 9. **Shot V3-09 – Closing Frame (340–380s)**
    - Calm closing slide: "When surfaces disagree, get curious, verify, then speak."
    - Call to action to share mixed-state stories and revisit Videos 1–2.
+
+---
+## Video 4 – Proof Before Claims: How to Package Evidence for AI Systems
+
+### Overall Visual Style
+- Same dark, text-first slide style as Videos 1–3.
+- Emphasis on simple folder diagrams, small charts, and file lists rather than complex illustrations.
+
+### Shot List (draft)
+1. **Shot V4-01 – Suspicious Chart (hook, 0–30s)**
+   - Full-screen slide with a chart comparing "Model A" and "Model B" with impressive-looking percentages but no citation.
+   - Caption: "Where did these numbers come from?" (no real model names, no real benchmark scores).
+
+2. **Shot V4-02 – Three Layers Diagram (30–70s)**
+   - Simple stacked diagram: "Story" → "Artifact" → "Proof bundle" with one-line descriptions.
+
+3. **Shot V4-03 – Anatomy of a Bundle (70–140s)**
+   - Folder-style illustration listing `artifact.png`, `data.csv`, `plot_chart.py`, `SHA256SUMS.txt`, `README.md`.
+
+4. **Shot V4-04 – Floors Example Callback (140–220s)**
+   - Minimal recap slide of the three world floors with a small note: "Each backed by public artifacts and scripts." (Re-use canonical phrasings; no new numbers.)
+
+5. **Shot V4-05 – Build Your Own Bundle (220–320s)**
+   - Checklist slide walking through prompts/outputs → rubric → CSV → tiny script → README.
+
+6. **Shot V4-06 – Capability Chain Reminder (320–380s)**
+   - Diagram of the text-only → spec/assets → GUI/human → Studio chain with a small lock icon over the GUI step.
+
+7. **Shot V4-07 – Closing Checklist (380–440s)**
+   - Five-line on-screen checklist: Name claim / Collect files / Hash them / Tiny README / Story on top.
