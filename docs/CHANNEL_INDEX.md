@@ -60,7 +60,7 @@ Status:
 | Slides directory | assets/video4_slides/ | Rendered PNG slides for this video. |
 | Concat/timing file | assets/video4_slides/shots.txt | Concat descriptor for the slides-only animatic. |
 | Build quickstart doc | docs/VIDEO4_BUILD_QUICKSTART.md | Step-by-step build and mux recipe for Video 4. |
-| Timing/proof bundle directory | artifacts/video4/proof_examples/ | Claim-level proof bundle example with hashes/data/script. |
+| Timing/proof bundle directory | artifacts/video4/proof_examples/ | Claim-level proof bundle example with hashes/data/script; docs/TIMING_PROOF_BUNDLES_OVERVIEW.md explains how it fits into timing proof bundles. |
 | YouTube metadata draft | metadata/video4_youtube_metadata.md | Draft metadata aligned to the proof-bundle script. |
 | Publish-time proof bundle plan/example | docs/PUBLISH_PROOF_BUNDLE_PLAN.md | Publish proof plan (example in artifacts/publish_proof/example_video/README.md). |
 
@@ -77,7 +77,7 @@ Status:
 | Slides directory | assets/video5_slides/ | Rendered PNG slides for this video. |
 | Concat/timing file | assets/video5_slides/shots.txt | Concat descriptor for the rough animatic timings. |
 | Build quickstart doc | docs/VIDEO5_BUILD_QUICKSTART.md | Regeneration, ffmpeg rough-animatic, and timing-capture guide. |
-| Timing/proof bundle directory | artifacts/video5/timing_proof/ | Timing proof bundle with wordcounts, shot timings, and commands. |
+| Timing/proof bundle directory | artifacts/video5/timing_proof/ | Timing proof bundle with wordcounts, shot timings, and commands; main timing proof bundle example for the channel, and docs/TIMING_PROOF_BUNDLES_OVERVIEW.md describes the structure. |
 | YouTube metadata draft | metadata/video5_youtube_metadata.md | Draft metadata aligned to the timing/proof script. |
 | Publish-time proof bundle plan/example | docs/PUBLISH_PROOF_BUNDLE_PLAN.md | Publish proof plan (example in artifacts/publish_proof/example_video/README.md). |
 
