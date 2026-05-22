@@ -1,0 +1,6 @@
+Video 8 script wordcount (planning reference only)
+
+Script file: scripts/video8_using_proof_bundles_on_your_channel.md
+
+words: 1975
+notes: Counted with `wc -w` at planning time; actual spoken words in a narration may differ slightly.

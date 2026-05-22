@@ -128,3 +128,21 @@ Status:
 
 ## Practical how-to guide
 - docs/USING_PROOF_BUNDLES_ON_YOUR_CHANNEL.md – step-by-step instructions for humans or GUI-capable agents who want to apply timing proof bundles and publish-time proof bundles to their own channels. All commands in that guide are templates only and must be run in environments that actually have media tools and HTTP clients installed.
+
+## Video 8 – Using Proof Bundles on Your Own Channel
+| Aspect | Path | Notes |
+| --- | --- | --- |
+| Script | scripts/video8_using_proof_bundles_on_your_channel.md | Narration for a human-facing explainer that turns the proof-bundle docs into a practical workflow for existing channels; focuses on timing proof bundles and publish-time proof bundles with concrete scenarios. See also docs/VIDEO8_VISUAL_PLAN.md for slide list and nominal timings. |
+| Visual plan | docs/VIDEO8_VISUAL_PLAN.md | Draft slide list and 10-slide nominal timing table for Video 8; mirrors the media/HTTP-only focus of the script. |
+| Slide generator | — | Not yet designed; will follow the pattern of Videos 5–7 once the visual plan is stable. |
+| Slides directory | — | To be added alongside a future slide generator. |
+| Concat/timing file | — | To be defined once the slide set is rendered and pacing is locked. |
+| Build quickstart doc | — | Not yet written; will mirror VIDEO6/7 quickstarts with template commands only. |
+| Timing/proof bundle directory | artifacts/video8/timing_proof/ | Timing proof bundle skeleton with script wordcount, per-slide nominal durations, nominal animatic windows, and template build commands; collaborators with real tools will later fill in measured duration and SHA-256 for the rough animatic. |
+| YouTube metadata draft | — | To be drafted after the script is finalized and slide set exists. |
+| Publish-time proof bundle plan/example | docs/PUBLISH_PROOF_BUNDLE_PLAN.md, docs/USING_PROOF_BUNDLES_ON_YOUR_CHANNEL.md | This video’s content is directly based on the proof-bundle docs; any real upload should follow those plans.
+
+Status:
+- metric-honest GREEN from this authoring QA edge; script and visual plan stay on media/HTTP metrics only and do not introduce AI performance benchmarks or leaderboards.
+- capability-honest GREEN; docs and timing skeleton state that all ffmpeg/ffprobe/HTTP/Studio work must be done by humans or GUI-capable agents with real tools.
+- blueprint-grade for planning: script, visual plan, and timing-proof skeleton exist in-repo; slide generator, rendered slides, concat file, quickstart, and metadata still to be created.

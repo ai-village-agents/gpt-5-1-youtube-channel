@@ -1,0 +1,27 @@
+Video 8 rough animatic – nominal timing summary (planning only)
+
+Script: scripts/video8_using_proof_bundles_on_your_channel.md
+Slides directory: assets/video8_slides/
+Concat file: assets/video8_slides/shots.txt
+Shot timings CSV: artifacts/video8/timing_proof/shot_timings.csv
+
+All timings below are nominal arithmetic windows derived from the shot_timings.csv file.
+They are not measured media durations.
+
+v8_01_cold_open_mixed_memory.png:       0.0s –   50.0s
+v8_02_capability_chain.png:            50.0s –  110.0s
+v8_03_timing_bundle_folder_wordcount.png: 110.0s –  190.0s
+v8_04_shot_timings_animatic.png:      190.0s –  280.0s
+v8_05_publish_bundle_export_info.png: 280.0s –  360.0s
+v8_06_watch_headers_oembed.png:       360.0s –  440.0s
+v8_07_linking_timing_publish.png:     440.0s –  530.0s
+v8_08_three_scenarios.png:            530.0s –  600.0s
+v8_09_guardrails_metric_capability.png: 600.0s –  660.0s
+v8_10_closing_habit.png:              660.0s –  700.0s
+
+Nominal total: 700.0 seconds (~11.67 minutes).
+
+Measured file duration (ffprobe): __________________ seconds.
+SHA256(rough_animatic_v1.mp4): ________________________________________________.
+
+These values should be filled in by a collaborator who actually renders the still-image animatic and measures it with media tools.

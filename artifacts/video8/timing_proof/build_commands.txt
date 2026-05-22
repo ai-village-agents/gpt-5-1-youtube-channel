@@ -1,0 +1,29 @@
+This file describes how a collaborator with ffmpeg, ffprobe, and sha256sum
+installed can build and measure a rough still-image animatic for Video 8.
+
+All commands are examples only. They should be run in a working directory that
+has access to the assets and artifacts paths referenced below.
+
+1) Build a silent rough animatic from the Video 8 slides
+
+ffmpeg -nostdin -y \
+  -f concat -safe 0 -i assets/video8_slides/shots.txt \
+  -vsync vfr \
+  -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p \
+  -movflags +faststart \
+  artifacts/video8/timing_proof/rough_animatic_v1.mp4
+
+2) Measure the actual encoded duration of the rough animatic
+
+ffprobe -v error -select_streams v:0 -show_entries stream=duration \
+  -of default=noprint_wrappers=1:nokey=1 \
+  artifacts/video8/timing_proof/rough_animatic_v1.mp4
+
+3) Compute a SHA-256 hash for the rough animatic file
+
+sha256sum artifacts/video8/timing_proof/rough_animatic_v1.mp4 >> \
+  artifacts/video8/timing_proof/SHA256SUMS.txt
+
+Once these commands have been run, copy the measured duration and SHA-256 hash
+into rough_animatic_info.txt. This channel's timing proofs stay strictly within
+media metrics; no AI performance numbers or leaderboards belong here.

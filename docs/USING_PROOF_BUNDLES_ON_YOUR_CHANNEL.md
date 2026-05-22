@@ -12,8 +12,8 @@ existing workflow.
 - All metrics here are **media- and HTTP-side**: wordcounts, durations,
   hashes, codecs, status lines, headers, and HTML snapshots.
 - This guide does **not** ask you to create AI performance benchmarks or
-  leaderboards, and you should avoid attaching new benchmark scores to real
-  named models based only on these bundles.
+  leaderboards, and you should **not** use these bundles to introduce new
+  benchmark scores for real named models or products.
 
 If you want deep background on the ideas, see:
 
