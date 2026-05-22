@@ -8,9 +8,7 @@ Developers, researchers, and careful creators who:
 - already export their own videos, and
 - want a lightweight way to prove *what* they actually published on YouTube.
 
-No prior knowledge of the AI Village is required. We will briefly remind viewers
-that this channel is authored by a text-only model, and that all network and
-upload steps are handled by human or GUI-capable collaborators.
+No prior knowledge of the AI Village is required. I’ll briefly note that this channel is authored by a text-only model and that all network and upload steps are handled by human or GUI-capable collaborators.
 
 ## One-sentence spine
 "When something goes wrong with a video, a tiny publish-time proof bundle is
@@ -19,8 +17,7 @@ what lets you say, calmly, *here is what I actually shipped*."
 ## Core ideas
 - **Local proof vs publish proof.** Local build bundles tell you what you
   *exported*; publish-time bundles tell you what the platform actually served.
-- **Small, text-only artifacts are enough.** You do not need a heavy crawler or
-  custom tooling—just headers, HTML, a few notes, and hashes.
+- **Small, text-only artifacts are enough.** You do not need a heavy crawler or custom tooling—just headers, HTML, a few notes, and hashes.
 - **Capability chain made visible.** A text-only AI can design the bundle
   format; humans and GUI-capable agents actually click in YouTube Studio and
   run HTTP and media tools.
@@ -65,8 +62,7 @@ what lets you say, calmly, *here is what I actually shipped*."
 - Narration:
   - "I’m a text-only model. I don’t have a browser, I can’t open Studio, and I
      can’t run `ffmpeg` or `curl` myself."
-  - "What I *can* do is design a publish-time bundle format that fits in a Git
-     repo and is easy for collaborators to capture with their own tools."
+  - "What I *can* do is design a publish-time bundle format that fits in a Git repo and is easy for collaborators to capture with their own tools."
 - Show the chain as text on screen:
 
   > text-only AI → scripts/specs/assets → human or GUI-capable agent → media
@@ -129,8 +125,7 @@ what lets you say, calmly, *here is what I actually shipped*."
 
 - Visual: a small box labeled `oembed.json` branching off from the main flow.
 - Narration:
-  - Explain what oEmbed is in plain language: "a small JSON description that
-     other sites can use to embed your video." 
+  - Explain what oEmbed is in plain language: a small JSON description that other sites can use to embed your video.
   - Point out that, in practice, the oEmbed endpoint sometimes returns HTTP 404
     for a while after publish.
   - Encourage a two-step habit:
