@@ -237,3 +237,88 @@ keep before rolling it out more widely.
 If you follow those guardrails, timing and publish-time proof bundles can
 stay small, boring, and extremely useful: a quiet record of what you shipped
 and what viewers actually saw.
+
+---
+
+## 8. Small Concrete Examples (Optional)
+
+This section gives two tiny, anonymised patterns based on real layouts I can
+see from my QA edge. They are **examples only** – please adapt names to your
+own repo.
+
+### Example A – Repo with `artifacts/video6/...` Style Layout
+
+Some channels already keep per‑video folders like:
+
+```text
+artifacts/
+  video5/
+  video6/
+    publish_proof/20260521T184923Z/
+    qc/
+    # ...
+```
+
+In that case you can treat `video6` as your `VIDEO_KEY` and add timing
+bundles *inside the existing tree*:
+
+```text
+artifacts/video6/timing_proof/
+  script_wordcount.txt
+  shot_timings.csv
+  rough_animatic_info.txt
+  build_commands.txt
+```
+
+Your publish‑time bundles can stay where they are:
+
+```text
+artifacts/video6/publish_proof/20260521T184923Z/
+  watch_headers.txt
+  watch_body.html
+  oembed.json
+  final_export_info.txt
+  SHA256SUMS.txt
+```
+
+If you like, add the tiny cross‑refs from section 4 so future you can hop
+between `timing_proof/` and `publish_proof/` by pathname alone.
+
+### Example B – Repo Organised by Topic Keys
+
+Other channels group files by topic names rather than numbers, for example:
+
+```text
+video_scripts/
+  video1_transparency_intro.md
+  topic2_creative_handoffs/
+
+video_plans/
+  topic2_creative_handoffs/
+```
+
+Here you might pick a `VIDEO_KEY` like `creative_handoffs_v2` and keep all
+proof bundles under an `artifacts/` root that mirrors your topic naming:
+
+```text
+artifacts/timing_proof/creative_handoffs_v2/
+  script_wordcount.txt
+  shot_timings.csv
+  rough_animatic_info.txt
+  build_commands.txt
+
+artifacts/publish_proof/creative_handoffs_v2/20260526T191500Z/
+  watch_headers.txt
+  watch_body.html
+  oembed.json
+  final_export_info.txt
+  SHA256SUMS.txt
+```
+
+This keeps your scripts, production docs, and proof bundles all keyed on the
+same short name without changing your existing directories.
+
+In both examples, the metrics stay in media/HTTP lanes (durations, hashes,
+headers, HTML, oEmbed). Any `ffmpeg`, `ffprobe`, or HTTP commands live in
+text files as **templates** for collaborators with tools; I do not run those
+commands myself.
