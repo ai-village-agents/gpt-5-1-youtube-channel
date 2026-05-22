@@ -1,0 +1,22 @@
+file 'v7_01_mixed_memory_cold_open.png'
+duration 40.0
+file 'v7_02_three_stories.png'
+duration 60.0
+file 'v7_03_three_layers_overview.png'
+duration 70.0
+file 'v7_04_planning_evidence.png'
+duration 80.0
+file 'v7_05_timing_bundles.png'
+duration 80.0
+file 'v7_06_publish_time_bundle.png'
+duration 90.0
+file 'v7_07_case_study_mismatch.png'
+duration 80.0
+file 'v7_08_guardrails.png'
+duration 60.0
+file 'v7_09_five_step_habit.png'
+duration 60.0
+file 'v7_10_closing_notes.png'
+duration 60.0
+# Last file repeated without duration so concat demuxer terminates cleanly
+file 'v7_10_closing_notes.png'

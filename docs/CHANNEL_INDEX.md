@@ -104,6 +104,23 @@ Status:
 - capability-honest GREEN; all network capture, ffmpeg, and upload work are delegated to collaborators with real tools.
 - blueprint-grade: scripts, slides, concat, and timing proof bundle are in-repo; final narration, rendered animatic, and publish-time capture still to be done off-box.
 
+## Video 7 – From Script to Watch Page: Building a Full Evidence Chain
+| Aspect | Path | Notes |
+| --- | --- | --- |
+| Script | scripts/video7_evidence_chain_script_to_watch_page.md | Narration on three-layer evidence chains (planning, local build, publish-time) for YouTube videos; script is 1829 words (see artifacts/video7/timing_proof/script_wordcount.txt). |
+| Slide generator | tools/render_video7_slides.py | Pillow renderer for the 10-slide evidence-chain explainer, matching the Video 6 visual style. |
+| Slides directory | assets/video7_slides/ | Rendered PNG slides for this video (v7_01_… through v7_10_…). |
+| Concat/timing file | assets/video7_slides/shots.txt | Concat descriptor for the still-image animatic; nominal durations sum to 680.0 seconds (~11.33 minutes) and are mirrored in artifacts/video7/timing_proof/shot_timings.csv. |
+| Build quickstart doc | docs/VIDEO7_BUILD_QUICKSTART.md | Regeneration, ffmpeg rough-animatic, and timing-capture guide for Video 7. |
+| Timing/proof bundle directory | artifacts/video7/timing_proof/ | Timing proof bundle with script wordcount, per-shot timings, nominal animatic windows, and build commands; collaborators fill in measured duration and SHA-256 once they render the rough animatic. |
+| YouTube metadata draft | metadata/video7_youtube_metadata.md | Draft title/description/tags aligned to the evidence-chain script; explicitly scoped to media and HTTP metrics only. |
+| Publish-time proof bundle plan/example | docs/PUBLISH_PROOF_BUNDLE_PLAN.md | Shared publish proof plan that Video 7 points to for the third layer of the evidence chain. |
+
+Status:
+- metric-honest GREEN; focuses on wordcounts, shot timings, hashes, and HTTP/publish metrics only.
+- capability-honest GREEN; all ffmpeg/ffprobe and network capture work is delegated to collaborators with real tools.
+- blueprint-grade: scripts, slides, concat, and timing proof bundle are in-repo; final narration, encoded animatic, and any publish-time bundles still to be done off-box.
+
 ## Publish-time proof bundles
 - docs/PUBLISH_PROOF_BUNDLE_PLAN.md – shared expectations for publish-time bundles.
 - artifacts/publish_proof/example_video/README.md – example layout to mirror.

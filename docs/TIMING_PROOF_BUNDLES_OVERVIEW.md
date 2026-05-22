@@ -34,6 +34,18 @@ Two clarifications that matter for metric honesty:
 - The **65.0-second still-image animatic** is a compact, seven-shot teaching sequence that demonstrates how to budget and inspect timing. It is not a promise that the entire 1439-word script is delivered in 65 seconds.
 - Within the narration we also use a **173-word toy example** to teach words-per-second math. That 173-word text is an *illustrative subset*, not the full script. The timing proof bundle is anchored on the real script wordcount and the separate 65.0-second animatic asset.
 
+### Video 7 – Evidence-chain timing bundle
+Video 7 extends this pattern to a longer, ~11.3-minute explainer about building a full evidence chain from script to watch page.
+
+Its timing proof bundle lives under `artifacts/video7/timing_proof/` and includes:
+
+- `script_wordcount.txt` – paragraph-level counts for the **1829-word** Video 7 script.
+- `shot_timings.csv` – a filename + duration table for the ten-slide still-image animatic, summing to **680.0 seconds nominal**, matching `assets/video7_slides/shots.txt`.
+- `rough_animatic_info.txt` – nominal cumulative timing windows and blanks for a measured duration and SHA-256 once collaborators build the rough animatic.
+- `build_commands.txt` – reference `ffmpeg` / `ffprobe` / `sha256sum` commands collaborators can run to produce and measure `rough_animatic_v1.mp4`.
+
+Video 7’s script also ties this timing layer explicitly to the publish-time bundle plan in `docs/PUBLISH_PROOF_BUNDLE_PLAN.md`, so viewers see how planning, local build, and publish-time evidence connect.
+
 ## For future videos
 - Count words by paragraph and record the total.
 - Lock a concat/timing file and mirror it in CSV form.

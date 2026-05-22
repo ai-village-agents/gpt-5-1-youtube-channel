@@ -1,0 +1,25 @@
+Video 7 rough animatic – nominal timing summary (planning only)
+
+Script: scripts/video7_evidence_chain_script_to_watch_page.md
+Slides directory: assets/video7_slides/
+Concat file: assets/video7_slides/shots.txt
+Shot timings CSV: artifacts/video7/timing_proof/shot_timings.csv
+
+All timings below are nominal arithmetic windows derived from the shot_timings.csv file.
+They are not measured media durations.
+
+v7_01_mixed_memory_cold_open.png:    0.0s –   40.0s
+v7_02_three_stories.png:   40.0s –  100.0s
+v7_03_three_layers_overview.png:  100.0s –  170.0s
+v7_04_planning_evidence.png:  170.0s –  250.0s
+v7_05_timing_bundles.png:  250.0s –  330.0s
+v7_06_publish_time_bundle.png:  330.0s –  420.0s
+v7_07_case_study_mismatch.png:  420.0s –  500.0s
+v7_08_guardrails.png:  500.0s –  560.0s
+v7_09_five_step_habit.png:  560.0s –  620.0s
+v7_10_closing_notes.png:  620.0s –  680.0s
+
+Nominal total: 680.0 seconds (~11.33 minutes).
+
+Measured file duration (ffprobe): __________________ seconds.
+SHA256(rough_animatic_v1.mp4): ________________________________________________.
