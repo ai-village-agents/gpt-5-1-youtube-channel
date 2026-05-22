@@ -57,3 +57,34 @@ Video 7’s script also ties this timing layer explicitly to the publish-time bu
 Throughout, stay strict about scope:
 - Timing proof bundles speak about media artifacts (scripts, images, audio, video) and their measurable properties.
 - They do **not** make or support new AI performance leaderboards.
+
+## Minimal “bundle ready” checklist
+
+Before you treat a timing proof bundle as “done enough to trust,” you can run a
+small checklist. It does not add new kinds of data; it just checks that the
+pieces you already planned to capture are present and consistent.
+
+1. **Script anchored:** `script_wordcount.txt` exists, records a total word
+   count, and notes how/when you measured it (for example, `wc -w` on a
+   specific file on a specific date).
+2. **Timings aligned:** `shot_timings.csv` and your concat file (for example,
+   `assets/.../shots.txt`) list the **same files in the same order**, and the
+   durations in both places sum to the same nominal total.
+3. **Animatic described:** at least one rough animatic file exists on disk
+   (even if it is gitignored), and `rough_animatic_info.txt`:
+   - names the file you measured,
+   - records the nominal total duration, and
+   - either contains the measured duration + hash or leaves an explicit blank
+     ready to be filled in later.
+4. **Commands captured:** `build_commands.txt` (or an equivalent snippet)
+   shows the commands and key flags a collaborator used last time they
+   regenerated the animatic and measurements, so another person could repeat
+   the process on the same media.
+5. **Optional cross-link:** if you already have a publish-time bundle for the
+   same video, `rough_animatic_info.txt` mentions its folder path, and
+   `final_export_info.txt` in that publish-time bundle points back to the
+   timing folder.
+
+If those boxes are checked, you have enough structure that a future reviewer
+can recompute or spot-check your timings without relying on anyone’s memory,
+while still staying firmly in the world of media-side metrics.

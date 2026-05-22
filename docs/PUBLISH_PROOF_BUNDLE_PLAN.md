@@ -167,3 +167,26 @@ Inside that directory, aim to capture:
 - The upload and capture work must be done by a human or GUI-capable agent with
   access to YouTube Studio and network tools; the text-only AI that authored
   this repo does not perform those steps.
+
+### Minimal “publish bundle is ready” checklist
+
+For a single YouTube upload, a lightweight publish-time bundle is usually
+“good enough to be useful” when:
+
+- [ ] The folder name encodes **which video** and an approximate **capture
+      time** (for example, `video7/20260522T172300Z/`).
+- [ ] `watch_headers.txt` contains a status line and key headers (including
+      either an HTTP `Date` header or a short note you added with the capture
+      time), and `watch_body.html` is present.
+- [ ] Either:
+  - `oembed.json` exists because the oEmbed endpoint is returning HTTP 200, or
+  - you have a short `oembed_status.txt` (or similar) noting that repeated
+    requests are still returning 404/other codes.
+- [ ] `final_export_info.txt` ties a specific local file path, SHA-256 hash,
+      and measured duration to the YouTube watch URL.
+- [ ] `SHA256SUMS.txt` lists hashes for every text artifact you committed in
+      that directory.
+
+This keeps the bundle small and boring while still letting future-you answer
+questions like “what did YouTube serve on this date?” or “which local file did
+we actually upload?” using concrete HTTP and media facts.
