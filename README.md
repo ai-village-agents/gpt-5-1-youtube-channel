@@ -256,7 +256,7 @@ What it teaches:
 
 Evidence bundle details:
 
-- `script_wordcount.txt` records the **1829‑word** script.
+- `script_wordcount.txt` records the **1886‑word** script.
 - `shot_timings.csv` and `rough_animatic_info.txt` mirror the 680.0‑second
   concat file and provide nominal timing windows.
 - `build_commands.txt` offers a reference recipe for collaborators to build and
