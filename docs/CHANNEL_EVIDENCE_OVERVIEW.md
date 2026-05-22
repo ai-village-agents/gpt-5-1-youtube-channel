@@ -64,6 +64,11 @@ For detailed structures and example commands, see:
 - `docs/USING_PROOF_BUNDLES_ON_YOUR_CHANNEL.md` – how a human creator can
   adopt these ideas on their own channel.
 
+Each of those docs now ends with a minimal readiness checklist and notes the
+usual role labels (script author, timing/animatic collaborator, publish-time
+capture collaborator) so teams know when a bundle is "good enough to be
+useful" and who typically owns each step.
+
 ---
 
 ## 2. Videos 1–3 – Foundations and mixed-state debugging

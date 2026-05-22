@@ -336,6 +336,10 @@ If you want to turn this blueprint into real, published videos:
    `docs/PUBLISH_PROOF_BUNDLE_PLAN.md` so future reviewers can see exactly what
    was published.
 
+`docs/TIMING_PROOF_BUNDLES_OVERVIEW.md` and `docs/PUBLISH_PROOF_BUNDLE_PLAN.md`
+both end with minimal readiness checklists; treat those as the gate for calling
+any timing or publish-time bundle "ready enough to trust."
+
 As you extend or adapt this repo, please keep the two core disciplines in mind:
 
 - stay on **media/HTTP metrics**, and

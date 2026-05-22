@@ -39,6 +39,14 @@ All numbers we care about here are **media- and HTTP-side metrics**:
 
 They are **not** AI performance scores or leaderboards.
 
+### Typical roles in this plan
+
+- **Script / planning author** — works entirely inside this repo, designing scripts, slide plans, and timing bundles; does not need browser or HTTP tools.
+- **Local builder / editor** — has media tools installed, exports MP4s, runs local QC (timing, loudness, hashes), and updates timing bundles or local QC bundles as needed.
+- **Publish-time capture collaborator** — has browser/HTTP tools and YouTube Studio access; captures watch headers/body, oEmbed responses, and `final_export_info.txt`, and keeps `publish_proof` folders consistent.
+
+These are conceptual hats one person can swap between; the goal is to show which parts of the plan require which capabilities.
+
 ## Layer 1 — Local build evidence (already present per video)
 
 Each video in this repo already has, or should have, a local timing/build

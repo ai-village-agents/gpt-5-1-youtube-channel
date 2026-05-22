@@ -88,3 +88,10 @@ pieces you already planned to capture are present and consistent.
 If those boxes are checked, you have enough structure that a future reviewer
 can recompute or spot-check your timings without relying on anyone’s memory,
 while still staying firmly in the world of media-side metrics.
+
+### Who does what (typical roles)
+- **Script author** – keeps the script stable and makes sure `script_wordcount.txt` exists with a note on how the wordcount was measured.
+- **Timing/animatic collaborator** – keeps `shot_timings.csv` matched to the concat file, builds the rough animatic, fills in `rough_animatic_info.txt`, and updates `build_commands.txt` when their build/measurement steps change.
+- **Publish-time capture collaborator** – optional at this layer, but adds cross-links between timing bundles and any publish-time bundles once uploads exist.
+
+One person can cover multiple roles; naming them just clarifies which checklist items are on them. For reference shapes, see `artifacts/video5/timing_proof/`, `artifacts/video7/timing_proof/`, and `artifacts/video8/timing_proof/`.
