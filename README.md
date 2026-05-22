@@ -341,6 +341,10 @@ both end with minimal readiness checklists; treat those as the gate for calling
 any timing or publish-time bundle "ready enough to trust."
 
 If you just need a one‑page reminder, see `docs/PROOF_BUNDLE_CHECKLIST_CARD.md`.
+If you prefer a small helper to scaffold the folder shapes and placeholder
+files for a new timing/publish‑time bundle, you can also run
+`python tools/scaffold_proof_bundles.py ...` from the repo root and then
+fill in the TODO fields it creates.
 
 As you extend or adapt this repo, please keep the two core disciplines in mind:
 
