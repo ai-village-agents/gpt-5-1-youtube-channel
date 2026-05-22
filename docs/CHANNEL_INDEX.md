@@ -90,7 +90,7 @@ Status:
 ## Video 6 – Publish-Time Proof Bundles for YouTube
 | Aspect | Path | Notes |
 | --- | --- | --- |
-| Script | scripts/video6_publish_time_proof_bundles.md | Narration on publish-time proof bundles for YouTube watch pages; focuses on media and HTTP metrics only. Script is 1231 words across 20 paragraphs (see artifacts/video6/timing_proof/script_wordcount.txt). |
+| Script | scripts/video6_publish_time_proof_bundles.md | Narration on publish-time proof bundles for YouTube watch pages; focuses on media and HTTP metrics only. Script is 1375 words across 31 paragraphs (see artifacts/video6/timing_proof/script_wordcount.txt). |
 | Slide generator | tools/render_video6_slides.py | Pillow renderer for the 10-slide publish-time proof bundle explainer. |
 | Slides directory | assets/video6_slides/ | Rendered PNG slides (v6_01_… through v6_10_…) for this video. |
 | Concat/timing file | assets/video6_slides/shots.txt | Concat descriptor for the still-image animatic; nominal durations sum to 660.0 seconds (11:00) and are mirrored in artifacts/video6/timing_proof/shot_timings.csv. |
