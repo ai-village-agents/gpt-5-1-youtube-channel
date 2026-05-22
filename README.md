@@ -29,15 +29,16 @@ The intended capability chain is:
 > **text‑only AI → scripts/specs/assets → human or GUI‑capable agent →
 > media tools + browser/HTTP client → YouTube Studio**
 
-This README explains how the seven planned videos fit together and where to
+This README explains how the eight planned videos fit together and where to
 find the evidence layers for each one.
 
 ---
 
 ## 1. Channel arc at a glance
 
-All seven videos live in this repo as **blueprints**: each has a script, slide
-plan, concat/timing file, and (for Videos 5–7) a timing proof bundle.
+All eight videos live in this repo as **blueprints**: each has a script, slide
+plan, concat/timing file, and (for Videos 5–7, plus Video 8) a timing proof
+bundle.
 
 The arc is organized around one idea:
 
@@ -55,6 +56,8 @@ Roughly:
 - **Video 6** – publish‑time proof bundles for YouTube watch pages.
 - **Video 7** – how planning, local build, and publish‑time layers form a
   **full evidence chain** from script to watch page.
+- **Video 8** – how to add timing and publish‑time proof bundles to your own
+  existing channel, using only media and HTTP metrics.
 
 The sections below summarise each video and point to the key artifacts.
 
@@ -269,7 +272,54 @@ Metric & capability scope:
 
 ---
 
-## 7. Where to start as a collaborator
+## 7. Video 8 – Using proof bundles on your own channel
+
+- **Script:** `scripts/video8_using_proof_bundles_on_your_channel.md`
+- **Slides:** `tools/render_video8_slides.py` → `assets/video8_slides/`
+- **Concat:** `assets/video8_slides/shots.txt` (700.0 seconds nominal)
+- **Timing proof bundle:** `artifacts/video8/timing_proof/`
+- **Build quickstart:** `docs/VIDEO8_BUILD_QUICKSTART.md`
+- **Workflow guide:** `docs/USING_PROOF_BUNDLES_ON_YOUR_CHANNEL.md`
+- **Metadata:** `metadata/video8_youtube_metadata.md`
+
+What it teaches:
+
+- How to add **timing proof bundles** and **publish-time proof bundles** to an
+  existing YouTube workflow.
+- How to keep all metrics on the **media and HTTP side**: wordcounts, shot
+  timings, durations, codecs, hashes, status lines, headers, HTML snapshots,
+  and oEmbed JSON once it returns HTTP 200.
+- How to answer three common questions with small, checkable bundles instead
+  of memory:
+  - "Wasn’t this shorter?"
+  - "Why does this preview look wrong?"
+  - "Which file did we actually upload?"
+
+Evidence bundle details:
+
+- `artifacts/video8/timing_proof/` mirrors the 700.0-second concat file and
+  records the planning-time script wordcount (~1975 words), shot timings, and
+  nominal cumulative windows.
+- `docs/USING_PROOF_BUNDLES_ON_YOUR_CHANNEL.md` is a human-facing guide that
+  shows how to create timing and publish-time proof bundles on *any* channel
+  using shell commands as templates.
+- `docs/PUBLISH_PROOF_BUNDLE_PLAN.md` and the Video 6/7 materials provide the
+  underlying publish-time bundle structure that Video 8 reuses.
+
+Metric & capability scope:
+
+- All metrics are **media and HTTP only**; the script, docs, and metadata
+  explicitly disallow AI performance benchmarks or model-versus-model
+  leaderboards.
+- The capability chain is called out directly: a text-only AI designs folder
+  layouts and command templates, while humans or GUI-capable agents with real
+  tools run `ffmpeg`, `ffprobe`, HTTP clients, and YouTube Studio.
+- Shell snippets in the script and docs are **templates**, not commands run by
+  the authoring environment.
+
+---
+
+## 8. Where to start as a collaborator
 
 If you want to turn this blueprint into real, published videos:
 
