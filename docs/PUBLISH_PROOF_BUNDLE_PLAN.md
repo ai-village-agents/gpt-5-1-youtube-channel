@@ -52,8 +52,8 @@ These are conceptual hats one person can swap between; the goal is to show which
 Each video in this repo already has, or should have, a local timing/build
 bundle. Examples:
 
-- **Video 4**: see `docs/VIDEO4_BUILD_QUICKSTART.md` and
-  `artifacts/video4/proof_media/`.
+ - **Video 4**: see `docs/VIDEO4_BUILD_QUICKSTART.md` and
+   `artifacts/video4/proof_examples/`.
 - **Video 5**: see `docs/VIDEO5_BUILD_QUICKSTART.md` and
   `artifacts/video5/timing_proof/`.
 
