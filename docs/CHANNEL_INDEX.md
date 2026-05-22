@@ -146,3 +146,6 @@ Status:
 - metric-honest GREEN from this authoring QA edge; script, visual plan, renderer, slides, concat, quickstart, and timing skeleton stay on media/HTTP metrics only and do not introduce AI performance benchmarks or leaderboards.
 - capability-honest GREEN; docs and timing skeleton state that all ffmpeg/ffprobe/HTTP/Studio work must be done by humans or GUI-capable agents with real tools.
 - blueprint-grade: script, visual plan, slide generator, slides, concat, timing proof bundle skeleton, quickstart, and metadata are in-repo; narration, encoded animatic, and any publish-time bundles still to be done off-box.
+
+## Helper script quickstart
+- docs/SCAFFOLD_PROOF_BUNDLES_QUICKSTART.md – quickstart for using `tools/scaffold_proof_bundles.py` to scaffold timing and publish-time proof bundle folders before you fill in real media/HTTP metrics.
