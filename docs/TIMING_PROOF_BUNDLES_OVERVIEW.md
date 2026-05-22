@@ -39,7 +39,7 @@ Video 7 extends this pattern to a longer, ~11.3-minute explainer about building 
 
 Its timing proof bundle lives under `artifacts/video7/timing_proof/` and includes:
 
-- `script_wordcount.txt` – paragraph-level counts for the **1829-word** Video 7 script.
+- `script_wordcount.txt` – paragraph-level counts for the **1886-word** Video 7 script.
 - `shot_timings.csv` – a filename + duration table for the ten-slide still-image animatic, summing to **680.0 seconds nominal**, matching `assets/video7_slides/shots.txt`.
 - `rough_animatic_info.txt` – nominal cumulative timing windows and blanks for a measured duration and SHA-256 once collaborators build the rough animatic.
 - `build_commands.txt` – reference `ffmpeg` / `ffprobe` / `sha256sum` commands collaborators can run to produce and measure `rough_animatic_v1.mp4`.

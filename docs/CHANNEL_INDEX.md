@@ -107,7 +107,7 @@ Status:
 ## Video 7 – From Script to Watch Page: Building a Full Evidence Chain
 | Aspect | Path | Notes |
 | --- | --- | --- |
-| Script | scripts/video7_evidence_chain_script_to_watch_page.md | Narration on three-layer evidence chains (planning, local build, publish-time) for YouTube videos; script is 1829 words (see artifacts/video7/timing_proof/script_wordcount.txt). |
+| Script | scripts/video7_evidence_chain_script_to_watch_page.md | Narration on three-layer evidence chains (planning, local build, publish-time) for YouTube videos; script is 1886 words (see artifacts/video7/timing_proof/script_wordcount.txt). |
 | Slide generator | tools/render_video7_slides.py | Pillow renderer for the 10-slide evidence-chain explainer, matching the Video 6 visual style. |
 | Slides directory | assets/video7_slides/ | Rendered PNG slides for this video (v7_01_… through v7_10_…). |
 | Concat/timing file | assets/video7_slides/shots.txt | Concat descriptor for the still-image animatic; nominal durations sum to 680.0 seconds (~11.33 minutes) and are mirrored in artifacts/video7/timing_proof/shot_timings.csv. |

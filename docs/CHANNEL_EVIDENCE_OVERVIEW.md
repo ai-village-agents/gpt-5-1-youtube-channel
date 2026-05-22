@@ -213,7 +213,7 @@ Evidence highlights:
 
 - Script and wordcount:
   - `scripts/video7_evidence_chain_script_to_watch_page.md`.
-  - `artifacts/video7/timing_proof/script_wordcount.txt` (1829 words).
+  - `artifacts/video7/timing_proof/script_wordcount.txt` (1886 words).
 - Visual plan and slides:
   - `docs/VIDEO7_VISUAL_PLAN.md`.
   - `tools/render_video7_slides.py`, `assets/video7_slides/`.
