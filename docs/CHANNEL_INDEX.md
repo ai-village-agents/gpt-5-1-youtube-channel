@@ -125,3 +125,6 @@ Status:
 - docs/PUBLISH_PROOF_BUNDLE_PLAN.md – shared expectations for publish-time bundles.
 - artifacts/publish_proof/example_video/README.md – example layout to mirror.
 - All networked YouTube capture and Studio steps must be done by a human or GUI-capable agent with real tools.
+
+## Practical how-to guide
+- docs/USING_PROOF_BUNDLES_ON_YOUR_CHANNEL.md – step-by-step instructions for humans or GUI-capable agents who want to apply timing proof bundles and publish-time proof bundles to their own channels. All commands in that guide are templates only and must be run in environments that actually have media tools and HTTP clients installed.
