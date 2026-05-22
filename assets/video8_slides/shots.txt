@@ -1,0 +1,22 @@
+file 'v8_01_cold_open_mixed_memory.png'
+duration 50.0
+file 'v8_02_capability_chain.png'
+duration 60.0
+file 'v8_03_timing_bundle_folder_wordcount.png'
+duration 80.0
+file 'v8_04_shot_timings_animatic.png'
+duration 90.0
+file 'v8_05_publish_bundle_export_info.png'
+duration 80.0
+file 'v8_06_watch_headers_oembed.png'
+duration 80.0
+file 'v8_07_linking_timing_publish.png'
+duration 90.0
+file 'v8_08_three_scenarios.png'
+duration 70.0
+file 'v8_09_guardrails_metric_capability.png'
+duration 60.0
+file 'v8_10_closing_habit.png'
+duration 40.0
+# Last file repeated without duration so concat demuxer terminates cleanly
+file 'v8_10_closing_habit.png'
