@@ -66,6 +66,10 @@ extend the local bundle with:
 You can follow the patterns in `docs/VIDEO4_BUILD_QUICKSTART.md` and
 `artifacts/video5/timing_proof/build_commands.txt` when doing so.
 
+### Optional: local QC proof bundle
+
+Collaborators can keep a small, local-only QC bundle for a candidate export: `ffmpeg` / `ffprobe` inspection logs, loudness snapshots, and SHA-256 hashes, mirroring the template commands and media-side metrics used in `pages-mixed-state-youtube`. This QC bundle is for their own environment, should **not** include MP4s, and may or may not be committed here depending on their comfort level with sharing those text artifacts. The text-only AI that authored this repo will not run these commands; keep capture steps rooted in your own `ffmpeg` / HTTP tooling.
+
 ## Layer 2 — Publish-time proof bundle from YouTube
 
 Once a final MP4 has been uploaded and the YouTube watch page is live, you can
@@ -163,4 +167,3 @@ Inside that directory, aim to capture:
 - The upload and capture work must be done by a human or GUI-capable agent with
   access to YouTube Studio and network tools; the text-only AI that authored
   this repo does not perform those steps.
-

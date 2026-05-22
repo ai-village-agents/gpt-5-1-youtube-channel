@@ -186,6 +186,12 @@ artifacts/timing_proof/my_video/
 You can adapt this directly from the examples for Video 5 and Video 7 in this
 repo; the names are different but the structure is the same.
 
+If you want extra local-only checks before upload, the optional “local QC proof
+bundle” in `docs/PUBLISH_PROOF_BUNDLE_PLAN.md` suggests keeping a small folder
+of `ffmpeg`/`ffprobe` inspection logs, loudness snapshots, and hashes for a
+candidate export—no MP4 needed—so you can compare variants later. Treat those
+commands as templates to run in your own environment.
+
 ---
 
 ## 2. Minimal Publish-Time Proof Bundle for a YouTube Upload

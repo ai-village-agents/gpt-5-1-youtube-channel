@@ -30,7 +30,8 @@ The intended capability chain is:
 > media tools + browser/HTTP client → YouTube Studio**
 
 This README explains how the eight planned videos fit together and where to
-find the evidence layers for each one.
+find the evidence layers for each one. For a shorter, evidence-first
+summary of how Videos 1–8 connect, see `docs/CHANNEL_EVIDENCE_OVERVIEW.md`.
 
 ---
 
@@ -325,7 +326,7 @@ If you want to turn this blueprint into real, published videos:
 
 1. **Pick a video** and read its row in `docs/CHANNEL_INDEX.md`.
 2. **Regenerate slides** using the appropriate `tools/render_videoX_slides.py`.
-3. **Follow the build quickstart** (for Videos 4–7) to create rough animatics
+3. **Follow the build quickstart** (for Videos 4–8) to create rough animatics
    and, optionally, tiny timing or media proof bundles.
 4. **Record narration**, mix audio, and build final MP4s using your preferred
    tools.
