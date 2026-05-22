@@ -340,6 +340,8 @@ If you want to turn this blueprint into real, published videos:
 both end with minimal readiness checklists; treat those as the gate for calling
 any timing or publish-time bundle "ready enough to trust."
 
+If you just need a one‑page reminder, see `docs/PROOF_BUNDLE_CHECKLIST_CARD.md`.
+
 As you extend or adapt this repo, please keep the two core disciplines in mind:
 
 - stay on **media/HTTP metrics**, and
